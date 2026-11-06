@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Review and update local demo roadside assistance requests.">
+    <meta name="theme-color" content="#101c2c">
+    <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <title>Requests | RoadRescue Admin Demo</title>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/rtl.js" defer></script>
+    <script src="assets/js/admin.js" defer></script>
+  </head>
+  <body>
+    <site-header></site-header>
+    <main id="main-content">
+      <section class="admin-section">
+        <div class="container">
+          <section class="page-panel admin-gate" data-admin-gate aria-labelledby="admin-gate-title">
+            <span class="admin-gate__icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span><p class="eyebrow">Admin dashboard preview</p><h1 id="admin-gate-title">Local demo workspace</h1><p>This page is only a local preview. Start a demo session from the overview page; it does not authenticate an administrator.</p><p class="admin-notice">Status changes are saved in this browser only and do not dispatch a provider.</p><a class="button button--primary" href="admin-dashboard.html">Go to admin overview</a><p class="admin-status mt-3" data-admin-gate-status role="status" aria-live="polite"></p>
+          </section>
+          <div class="admin-shell" data-admin-shell data-admin-page="requests" hidden>
+            <aside class="admin-sidebar" id="admin-sidebar" aria-label="Admin preview navigation">
+              <a class="brand" href="admin-dashboard.html" aria-label="RoadRescue admin overview"><span class="brand__mark"><i class="bi bi-truck-front-fill" aria-hidden="true"></i></span><span class="brand__text">RoadRescue<span>Local admin preview</span></span></a><p class="admin-sidebar__label">Demo workspace</p>
+              <nav class="admin-sidebar__nav" aria-label="Admin pages">
+                <a class="admin-sidebar__link" href="admin-dashboard.html"><i class="bi bi-grid-1x2-fill" aria-hidden="true"></i>Overview</a><a class="admin-sidebar__link" href="admin-users.html"><i class="bi bi-people-fill" aria-hidden="true"></i>Users</a><a class="admin-sidebar__link" href="admin-requests.html"><i class="bi bi-truck" aria-hidden="true"></i>Requests</a><a class="admin-sidebar__link" href="admin-messages.html"><i class="bi bi-envelope-fill" aria-hidden="true"></i>Messages</a><a class="admin-sidebar__link" href="admin-analytics.html"><i class="bi bi-bar-chart-fill" aria-hidden="true"></i>Analytics</a><a class="admin-sidebar__link" href="admin-settings.html"><i class="bi bi-gear-fill" aria-hidden="true"></i>Settings</a>
+              </nav><button class="admin-sidebar__logout" type="button" data-admin-logout><i class="bi bi-box-arrow-right" aria-hidden="true"></i>End preview session</button>
+            </aside>
+            <button class="admin-backdrop" type="button" data-admin-sidebar-backdrop aria-label="Close admin navigation" hidden></button>
+            <div class="admin-workspace">
+              <header class="admin-page-head"><div><p class="eyebrow">Local admin preview</p><h1>Requests</h1><p>Search local roadside assistance requests and update their demo status.</p></div><button class="button button--secondary admin-sidebar-toggle" type="button" data-admin-sidebar-toggle aria-controls="admin-sidebar" aria-expanded="false" aria-label="Open admin navigation"><i class="bi bi-list" aria-hidden="true"></i><span>Menu</span></button></header>
+              <p class="admin-notice">Demo only: status updates are saved in this browser and may appear in the matching customer demo tracker. No dispatch or provider notification is sent.</p>
+              <div class="admin-toolbar">
+                <div class="form-field"><label for="admin-request-search">Search requests</label><input class="form-control" id="admin-request-search" type="search" placeholder="ID, service, email, or location"></div>
+                <div class="form-field"><label for="admin-request-filter">Status</label><select class="form-select" id="admin-request-filter"><option value="">All statuses</option><option>Under Process</option><option>Service Allocated</option><option>On the Way</option><option>Reached</option><option>Completed</option><option>Cancelled</option></select></div>
+                <p class="admin-toolbar__status" data-admin-table-status role="status" aria-live="polite"></p>
+              </div>
+              <div class="admin-table-wrap"><table class="admin-table"><caption class="visually-hidden">Local roadside assistance requests</caption><thead><tr><th scope="col">Request ID</th><th scope="col">Service</th><th scope="col">Customer email</th><th scope="col">Location</th><th scope="col">Created</th><th scope="col">Update status</th></tr></thead><tbody data-admin-request-rows></tbody></table><p class="admin-empty" data-admin-empty>Customer requests will appear here.</p></div>
+              <p class="admin-status mt-3" data-admin-status role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

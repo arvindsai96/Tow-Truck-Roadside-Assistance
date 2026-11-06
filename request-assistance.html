@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Create a local RoadRescue demo roadside assistance request.">
+    <meta name="theme-color" content="#101c2c">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Request Assistance | RoadRescue">
+    <meta property="og:description" content="Submit a roadside assistance request in the local RoadRescue demo.">
+    <meta property="og:url" content="https://roadrescue.example.com/request-assistance.html">
+    <link rel="canonical" href="https://roadrescue.example.com/request-assistance.html">
+    <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/customer.css">
+    <title>Request Assistance | RoadRescue</title>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/rtl.js" defer></script>
+    <script src="assets/js/customer.js" defer></script>
+  </head>
+  <body>
+    <site-header></site-header>
+    <main id="main-content">
+      <section class="customer-section">
+        <div class="container">
+          <div class="customer-shell" data-customer-shell data-customer-page="request" hidden>
+            <aside class="customer-sidebar" id="customer-sidebar" aria-label="Customer portal navigation">
+              <a class="brand" href="customer-dashboard.html" aria-label="RoadRescue customer overview"><span class="brand__mark"><i class="bi bi-truck-front-fill" aria-hidden="true"></i></span><span class="brand__text">My RoadRescue<span>Customer portal</span></span></a>
+              <p class="customer-sidebar__label">Account menu</p>
+              <nav class="customer-sidebar__nav" aria-label="Customer pages">
+                <a class="customer-sidebar__link" href="customer-dashboard.html"><i class="bi bi-grid-1x2-fill" aria-hidden="true"></i>Overview</a>
+                <a class="customer-sidebar__link" href="request-assistance.html"><i class="bi bi-plus-circle-fill" aria-hidden="true"></i>Request assistance</a>
+                <a class="customer-sidebar__link" href="track-request.html"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i>Track request</a>
+                <a class="customer-sidebar__link" href="request-history.html"><i class="bi bi-clock-history" aria-hidden="true"></i>Request history</a>
+                <a class="customer-sidebar__link" href="customer-profile.html"><i class="bi bi-person-fill" aria-hidden="true"></i>My profile</a>
+              </nav>
+              <button class="customer-sidebar__logout" type="button" data-logout><i class="bi bi-box-arrow-right" aria-hidden="true"></i>Sign out</button>
+            </aside>
+            <button class="customer-backdrop" type="button" data-sidebar-backdrop aria-label="Close customer navigation" hidden></button>
+            <div class="customer-workspace">
+              <header class="customer-page-head">
+                <div><p class="eyebrow">Customer portal</p><h1>Request assistance</h1><p>Tell us what happened and where your vehicle is located.</p></div>
+                <button class="icon-button customer-sidebar-toggle" type="button" data-sidebar-toggle aria-controls="customer-sidebar" aria-expanded="false" aria-label="Open customer navigation"><i class="bi bi-list" aria-hidden="true"></i><span>Menu</span></button>
+              </header>
+              <section class="page-panel" aria-labelledby="request-form-title">
+                <h2 id="request-form-title">Request details</h2>
+                <form class="customer-form" data-request-form>
+                  <div class="customer-form-grid">
+                    <div class="form-field"><label for="request-service">Service needed</label><select class="form-select" id="request-service" name="service" required><option value="">Choose a service</option><option>Local towing</option><option>Flat tire assistance</option><option>Battery jump start</option><option>Emergency fuel delivery</option><option>Vehicle lockout</option><option>Winch-out recovery</option><option>Motorcycle towing</option><option>Heavy-duty towing</option><option>Accident recovery</option><option>Vehicle transport</option><option>Fleet roadside assistance</option><option>Mobile mechanic</option></select></div>
+                    <div class="form-field"><label for="request-vehicle-type">Vehicle type</label><select class="form-select" id="request-vehicle-type" name="vehicleType" required><option value="">Choose a vehicle</option><option>Car</option><option>SUV</option><option>Pickup truck</option><option>Motorcycle</option><option>RV</option><option>Commercial truck</option><option>Other</option></select></div>
+                    <div class="form-field"><label for="request-vehicle-details">Vehicle details</label><input class="form-control" id="request-vehicle-details" name="vehicleDetails" maxlength="120" placeholder="Year, make, model, color (optional)"></div>
+                    <div class="form-field"><label for="request-location">Current location</label><input class="form-control" id="request-location" name="location" autocomplete="street-address" required maxlength="200" placeholder="Street, landmark, or mile marker"></div>
+                    <div class="form-field"><label for="request-destination">Preferred destination</label><input class="form-control" id="request-destination" name="destination" maxlength="200" placeholder="Optional"></div>
+                    <div class="form-field customer-form-field--full"><label for="request-description">Describe the situation</label><textarea class="form-control" id="request-description" name="description" required minlength="10" maxlength="1200" placeholder="Share symptoms, access notes, and anything that may affect the service."></textarea></div>
+                  </div>
+                  <div class="d-flex flex-wrap align-items-center gap-3"><button class="button button--primary" type="submit">Save request</button><p class="customer-status" data-request-status role="status" aria-live="polite"></p></div>
+                </form>
+                <div class="customer-result" data-request-result></div>
+              </section>
+            </div>
+          </div>
+          <section class="page-panel auth-required" data-auth-required hidden aria-labelledby="auth-required-title">
+            <p class="eyebrow">Customer portal</p><h1 id="auth-required-title">Sign in to continue</h1><p data-gate-message>You need an active local demo session to view this page.</p>
+            <div class="page-actions"><a class="button button--primary" href="login.html">Sign in</a><a class="button button--secondary" href="register.html">Create an account</a></div>
+          </section>
+          <noscript><p class="demo-notice">Enable JavaScript and sign in to use the customer demo portal.</p></noscript>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Understand the RoadRescue demo's security limitations, protect your information, and learn what a production roadside service needs.">
+    <meta name="theme-color" content="#101c2c">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Security | RoadRescue">
+    <meta property="og:description" content="Practical security guidance for using the RoadRescue browser demo and preparing a live service.">
+    <meta property="og:url" content="https://roadrescue.example.com/security.html">
+    <link rel="canonical" href="https://roadrescue.example.com/security.html">
+    <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <title>Security | RoadRescue</title>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/rtl.js" defer></script>
+  </head>
+  <body class="terms-page security-page">
+    <site-header></site-header>
+    <main id="main-content">
+      <section class="page-hero" aria-labelledby="page-title">
+        <div class="container page-hero__inner">
+          <ul class="breadcrumb" aria-label="Breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Security</li></ul>
+          <p class="eyebrow">Protect yourself and your information</p>
+          <h1 id="page-title">Security</h1>
+          <p class="page-hero__lead">Understand what this website demo can and cannot protect, how to use it safely, and what must be in place before a real roadside service launches.</p>
+          <div class="page-actions">
+            <a class="button button--primary" href="#security-overview">Explore security guidance <i class="bi bi-arrow-down icon-directional" aria-hidden="true"></i></a>
+            <a class="button button--secondary" href="privacy.html">Read Privacy Policy</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="terms-overview" id="security-overview" aria-label="Security at a glance">
+        <div class="container terms-overview__grid">
+          <article class="terms-overview__item">
+            <span class="terms-overview__icon"><i class="bi bi-shield-exclamation" aria-hidden="true"></i></span>
+            <div><h2>Demo, not secured access</h2><p>The local admin preview is not a protected production system.</p></div>
+          </article>
+          <article class="terms-overview__item">
+            <span class="terms-overview__icon"><i class="bi bi-person-lock" aria-hidden="true"></i></span>
+            <div><h2>Keep sensitive data out</h2><p>Do not enter real passwords, payment details, or identity documents.</p></div>
+          </article>
+          <article class="terms-overview__item">
+            <span class="terms-overview__icon"><i class="bi bi-cloud-check" aria-hidden="true"></i></span>
+            <div><h2>Build before launch</h2><p>A live service needs server-side security and operational safeguards.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section terms-content-section">
+        <div class="container terms-layout">
+          <article class="page-panel terms-content">
+            <div class="terms-template-notice security-notice" role="note">
+              <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+              <p><strong>Important demo limitation</strong><span>This static front-end template is not a secured service platform. Admin preview, sign-in, and request flows are demonstrations, not production authentication, dispatch, or data protection.</span></p>
+            </div>
+
+            <section id="demo-limits" aria-labelledby="demo-limits-title">
+              <h2 id="demo-limits-title">1. What this demo does not secure</h2>
+              <p>Sample profiles, requests, messages, settings, and preferences are stored in the browser. People who can use the same browser profile or device may be able to view or change this local data. Browser storage is not encrypted account storage, and the admin preview is not a security boundary.</p>
+              <p>There is no production identity verification, server-side authorization, live dispatch, or secure payment flow in this template. Do not treat demo status messages as confirmation that a real service has been requested.</p>
+            </section>
+
+            <section id="protect-yourself" aria-labelledby="protect-yourself-title">
+              <h2 id="protect-yourself-title">2. How to use the demo safely</h2>
+              <ul class="check-list">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Use invented sample information rather than real personal or vehicle-account details.</span></li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Never enter payment card numbers, identity documents, recovery codes, or passwords used on other sites.</span></li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Avoid using the admin preview on a shared device; clear this site's browser data when you finish.</span></li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>For actual roadside help, contact a provider directly and confirm acceptance. In an emergency, contact local emergency services.</span></li>
+              </ul>
+            </section>
+
+            <section id="production-controls" aria-labelledby="production-controls-title">
+              <h2 id="production-controls-title">3. Security controls for a live service</h2>
+              <p>A production service needs more than a polished interface. Before accepting real customer details, design and test a trusted backend with server-side input validation, authentication, authorization checks on every protected action, and secure session handling.</p>
+              <p>Use HTTPS throughout, restrict administrative access, keep dependencies and server software updated, protect secrets outside the source code, collect only necessary data, and define access logging, retention, deletion, backup, and incident-response procedures. Have the deployment independently reviewed by qualified security professionals.</p>
+            </section>
+
+            <section id="customer-data" aria-labelledby="customer-data-title">
+              <h2 id="customer-data-title">4. Protecting roadside customer information</h2>
+              <p>Location, phone number, vehicle details, and service history can be sensitive. A live provider should limit collection to what is needed for the request, restrict staff access by role, use secure transmission and storage, and explain how long records are kept and when they are deleted.</p>
+              <p>Do not send personal or vehicle details through an unverified contact channel. Review the <a href="privacy.html">Privacy Policy</a> to understand this template's browser-storage and external-resource disclosures.</p>
+            </section>
+
+            <section id="incident-reporting" aria-labelledby="incident-reporting-title">
+              <h2 id="incident-reporting-title">5. Reporting a security concern</h2>
+              <p>This sample site does not provide a dedicated security response service. For a live deployment, publish a monitored security contact and explain what information to include, how reports will be acknowledged, and how customers can report an urgent account or data concern.</p>
+              <p>Do not include passwords, payment details, or other sensitive data in a general contact message. For general questions about this template, use the <a href="contact.html">contact page</a>.</p>
+            </section>
+
+            <section id="updates" aria-labelledby="updates-title">
+              <h2 id="updates-title">6. Keeping this guidance current</h2>
+              <p>Security practices change as the site, hosting, integrations, and services evolve. Replace this sample guidance with the actual controls and reporting process for your business, assign an owner to review it periodically, and update it after significant changes.</p>
+            </section>
+          </article>
+
+          <aside class="terms-sidebar" aria-label="Security navigation and safe-use reminder">
+            <nav class="page-panel terms-toc" aria-labelledby="security-toc-title">
+              <h2 id="security-toc-title">On this page</h2>
+              <a href="#demo-limits">Demo limitations</a>
+              <a href="#protect-yourself">Use the demo safely</a>
+              <a href="#production-controls">Production controls</a>
+              <a href="#customer-data">Customer data</a>
+              <a href="#incident-reporting">Report a concern</a>
+              <a href="#updates">Keeping guidance current</a>
+            </nav>
+
+            <div class="page-panel terms-help">
+              <span class="terms-overview__icon"><i class="bi bi-life-preserver" aria-hidden="true"></i></span>
+              <h2>Need roadside assistance?</h2>
+              <p>This demo does not contact a dispatcher. Call a provider directly to confirm live help.</p>
+              <a class="button button--primary" href="tel:+18005550199"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call (800) 555-0199</a>
+              <a class="terms-help__link" href="terms.html">Read Terms of Service <i class="bi bi-arrow-up-right icon-directional" aria-hidden="true"></i></a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

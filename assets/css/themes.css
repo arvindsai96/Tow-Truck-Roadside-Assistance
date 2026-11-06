@@ -1,0 +1,29 @@
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-primary: #eaf1f8;
+  --color-primary-strong: #fff;
+  --color-accent: #ff7b43;
+  --color-accent-hover: #ff9264;
+  --color-accent-soft: #3a281f;
+  --color-info-soft: #1a2c3c;
+  --color-background: #0d1520;
+  --color-surface: #141f2c;
+  --color-surface-raised: #1a2837;
+  --color-text: #edf3fa;
+  --color-text-muted: #a4b2c2;
+  --color-border: #2b3a4b;
+  --color-header: rgba(13, 21, 32, 0.96);
+  --color-header-utility: #080e16;
+  --color-footer: #080e16;
+  --color-footer-text: #bdc9d6;
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.18);
+  --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.28);
+}
+
+[data-theme="dark"] .button--secondary:hover {
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] .announcement-bar {
+  color: #f2f6fb;
+}

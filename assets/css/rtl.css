@@ -1,0 +1,27 @@
+[dir="rtl"] {
+  text-align: start;
+}
+
+[dir="rtl"] .site-nav__dropdown {
+  inset-inline: auto 0;
+}
+
+[dir="rtl"] .site-nav__item--dropdown > .site-nav__dropdown-toggle .bi-chevron-down {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .icon-directional {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] input,
+[dir="rtl"] select,
+[dir="rtl"] textarea {
+  text-align: start;
+}
+
+@media (max-width: 900px) {
+  [dir="rtl"] .site-nav__content {
+    text-align: start;
+  }
+}

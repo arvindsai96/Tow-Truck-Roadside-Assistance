@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Review the RoadRescue requests saved in your local demo profile.">
+    <meta name="theme-color" content="#101c2c">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Request History | RoadRescue">
+    <meta property="og:description" content="Review saved sample roadside requests in the customer portal.">
+    <meta property="og:url" content="https://roadrescue.example.com/request-history.html">
+    <link rel="canonical" href="https://roadrescue.example.com/request-history.html">
+    <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/customer.css">
+    <title>Request History | RoadRescue</title>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/rtl.js" defer></script>
+    <script src="assets/js/customer.js" defer></script>
+  </head>
+  <body>
+    <site-header></site-header>
+    <main id="main-content">
+      <section class="customer-section">
+        <div class="container">
+          <div class="customer-shell" data-customer-shell data-customer-page="history" hidden>
+            <aside class="customer-sidebar" id="customer-sidebar" aria-label="Customer portal navigation">
+              <a class="brand" href="customer-dashboard.html" aria-label="RoadRescue customer overview"><span class="brand__mark"><i class="bi bi-truck-front-fill" aria-hidden="true"></i></span><span class="brand__text">My RoadRescue<span>Customer portal</span></span></a>
+              <p class="customer-sidebar__label">Account menu</p>
+              <nav class="customer-sidebar__nav" aria-label="Customer pages">
+                <a class="customer-sidebar__link" href="customer-dashboard.html"><i class="bi bi-grid-1x2-fill" aria-hidden="true"></i>Overview</a>
+                <a class="customer-sidebar__link" href="request-assistance.html"><i class="bi bi-plus-circle-fill" aria-hidden="true"></i>Request assistance</a>
+                <a class="customer-sidebar__link" href="track-request.html"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i>Track request</a>
+                <a class="customer-sidebar__link" href="request-history.html"><i class="bi bi-clock-history" aria-hidden="true"></i>Request history</a>
+                <a class="customer-sidebar__link" href="customer-profile.html"><i class="bi bi-person-fill" aria-hidden="true"></i>My profile</a>
+              </nav>
+              <button class="customer-sidebar__logout" type="button" data-logout><i class="bi bi-box-arrow-right" aria-hidden="true"></i>Sign out</button>
+            </aside>
+            <button class="customer-backdrop" type="button" data-sidebar-backdrop aria-label="Close customer navigation" hidden></button>
+            <div class="customer-workspace">
+              <header class="customer-page-head">
+                <div><p class="eyebrow">Customer portal</p><h1>Request history</h1><p>Review requests saved under your local demo profile.</p></div>
+                <button class="icon-button customer-sidebar-toggle" type="button" data-sidebar-toggle aria-controls="customer-sidebar" aria-expanded="false" aria-label="Open customer navigation"><i class="bi bi-list" aria-hidden="true"></i><span>Menu</span></button>
+              </header>
+              <p class="customer-notice">These records are stored in this browser only. They are not dispatch records and do not represent real service activity.</p>
+              <section aria-labelledby="history-title"><div class="customer-section-heading"><h2 id="history-title">Saved requests</h2><a class="button button--secondary" href="request-assistance.html">New request</a></div><div class="customer-list" data-request-history></div></section>
+            </div>
+          </div>
+          <section class="page-panel auth-required" data-auth-required hidden aria-labelledby="auth-required-title">
+            <p class="eyebrow">Customer portal</p><h1 id="auth-required-title">Sign in to continue</h1><p data-gate-message>You need an active local demo session to view this page.</p>
+            <div class="page-actions"><a class="button button--primary" href="login.html">Sign in</a><a class="button button--secondary" href="register.html">Create an account</a></div>
+          </section>
+          <noscript><p class="demo-notice">Enable JavaScript and sign in to use the customer demo portal.</p></noscript>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

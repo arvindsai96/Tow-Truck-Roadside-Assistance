@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore illustrative RoadRescue roadside coverage regions, filter sample services, and learn what to share when confirming local availability.">
+    <meta name="theme-color" content="#101c2c">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Roadside Assistance Coverage | RoadRescue">
+    <meta property="og:description" content="Browse sample RoadRescue service regions and learn how to confirm roadside assistance availability for your location.">
+    <meta property="og:url" content="https://roadrescue.example.com/coverage.html">
+    <link rel="canonical" href="https://roadrescue.example.com/coverage.html">
+    <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <title>Roadside Assistance Coverage | RoadRescue</title>
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/rtl.js" defer></script>
+    <script src="assets/js/pages.js" defer></script>
+  </head>
+  <body class="coverage-page">
+    <site-header></site-header>
+    <main id="main-content">
+      <section class="page-hero coverage-hero" aria-labelledby="page-title">
+        <div class="container coverage-hero__grid">
+          <div class="coverage-hero__copy">
+            <ul class="breadcrumb" aria-label="Breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Coverage</li></ul>
+            <p class="eyebrow"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Coverage overview</p>
+            <h1 id="page-title">Roadside support, in the places you travel</h1>
+            <p class="page-hero__lead">Explore example service regions, compare the types of help shown, and learn what information makes an availability check easier. Coverage and response times depend on your exact location and situation.</p>
+            <div class="page-actions">
+              <a class="button button--primary" href="#coverage-areas">Explore sample areas <i class="bi bi-arrow-down icon-directional" aria-hidden="true"></i></a>
+              <a class="button button--secondary" href="tel:+18005550199"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call to confirm</a>
+            </div>
+            <div class="coverage-hero__facts" aria-label="Coverage information">
+              <span><i class="bi bi-map" aria-hidden="true"></i> Example regions</span>
+              <span><i class="bi bi-truck" aria-hidden="true"></i> Multiple service types</span>
+              <span><i class="bi bi-clock" aria-hidden="true"></i> Availability varies</span>
+            </div>
+          </div>
+          <figure class="coverage-hero__visual">
+            <img src="assets/images/fleet/roadside-support-vehicle.jpg" alt="Roadside support vehicle ready to assist in its service area" width="1200" height="890" fetchpriority="high">
+          </figure>
+        </div>
+      </section>
+      <section class="section coverage-areas-section" id="coverage-areas" aria-labelledby="coverage-areas-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Explore the sample map</p>
+            <h2 id="coverage-areas-title">Find a region and the support listed there</h2>
+            <p>Filter the illustrative areas by region or service type. These entries are placeholders, not a live availability checker.</p>
+          </div>
+          <div class="grid grid--2 align-items-center mb-5">
+            <div class="coverage-map" role="img" aria-label="Illustrative map graphic with sample central, north, and south service locations">
+              <svg viewBox="0 0 640 360" aria-hidden="true">
+                <path d="M75 110 150 55l88 22 75-36 88 34 85-10 78 52-28 64-69 11-35 77-89 27-66-43-91 19-53-57-71-21z"></path>
+                <path d="m160 117 62 12 35 62-34 47-55-8-28-49z"></path>
+                <path d="m313 80 38 29-19 42 46 27-31 60-56-14-31-59z"></path>
+                <path d="m404 105 53-18 50 31-23 49-58-5-34-27z"></path>
+                <circle cx="250" cy="169" r="10"></circle><circle cx="349" cy="156" r="10"></circle><circle cx="451" cy="142" r="10"></circle>
+                <text x="202" y="207">Central</text><text x="326" y="196">North</text><text x="425" y="180">Airport</text>
+              </svg>
+            </div>
+            <div class="coverage-filter-panel">
+              <p class="eyebrow">Narrow the examples</p>
+              <h2>Filter by region or service</h2>
+              <p>Choose an option to see which sample locations list that kind of support.</p>
+              <div class="toolbar">
+                <div class="form-field"><label for="coverage-region">Region</label><select class="form-select" id="coverage-region"><option value="">All regions</option><option value="Metro">Metro</option><option value="County">County</option></select></div>
+                <div class="form-field"><label for="coverage-service">Service type</label><select class="form-select" id="coverage-service"><option value="">All services</option><option value="Towing">Towing</option><option value="Roadside">Roadside</option><option value="Recovery">Recovery</option><option value="Commercial">Commercial</option></select></div>
+                <p class="toolbar__status" data-coverage-status aria-live="polite"></p>
+              </div>
+            </div>
+          </div>
+          <div class="row g-4" data-coverage-grid aria-live="polite"></div>
+        </div>
+      </section>
+      <section class="section surface coverage-check-section" aria-labelledby="coverage-check-title">
+        <div class="container split-section coverage-check">
+          <div class="coverage-check__visual">
+            <img class="feature-image" src="assets/images/fleet/recovery-vehicle.jpg" alt="Recovery vehicle prepared to transport a vehicle from a roadside location" width="1200" height="890" loading="lazy">
+          </div>
+          <div>
+            <p class="eyebrow">Make the availability check useful</p>
+            <h2 id="coverage-check-title">What to share when you contact a provider</h2>
+            <p>A nearby region is only a starting point. Share a clear location and describe the vehicle and situation so the provider can confirm whether the requested service is practical.</p>
+            <ul class="check-list coverage-check__list">
+              <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span><strong>Your exact location</strong> — address, road name, direction of travel, exit, or a nearby landmark.</span></li>
+              <li><i class="bi bi-car-front-fill" aria-hidden="true"></i><span><strong>Vehicle details</strong> — type, make/model if known, and any access or clearance constraints.</span></li>
+              <li><i class="bi bi-tools" aria-hidden="true"></i><span><strong>What happened</strong> — the issue, service you think you need, and whether the vehicle can move.</span></li>
+              <li><i class="bi bi-shield-exclamation" aria-hidden="true"></i><span><strong>Safety conditions</strong> — traffic exposure, restricted access, weather, or other hazards.</span></li>
+            </ul>
+            <p class="form-help mt-3">If anyone is in immediate danger, contact local emergency services first.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section surface">
+        <div class="container contact-banner">
+          <div><p class="eyebrow">Need to confirm a location?</p><h2>Check service availability before you travel</h2><p>Call with your exact location and the type of assistance you need.</p></div>
+          <div class="contact-banner__actions"><a class="button button--primary" href="tel:+18005550199">Call (800) 555-0199</a><a class="button button--secondary" href="contact.html">Send a message</a></div>
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>
