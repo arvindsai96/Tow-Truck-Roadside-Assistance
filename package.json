@@ -1,0 +1,25 @@
+{
+  "name": "roadrescue-website",
+  "version": "1.0.0",
+  "description": "24/7 Tow Truck & Roadside Assistance Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "open": "node server.js --open",
+    "browser:chrome": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start chrome http://localhost:8080/' : 'google-chrome http://localhost:8080/'; exec(cmd);\"",
+    "browser:edge": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start msedge http://localhost:8080/' : 'microsoft-edge http://localhost:8080/'; exec(cmd);\"",
+    "browser:firefox": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start firefox http://localhost:8080/' : 'firefox http://localhost:8080/'; exec(cmd);\"",
+    "browser:safari": "node -e \"const { exec } = require('child_process'); exec('open -a Safari http://localhost:8080/');\""
+  },
+  "keywords": [
+    "roadside-assistance",
+    "tow-truck",
+    "responsive-website",
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": "RoadRescue",
+  "license": "ISC"
+}

@@ -1,0 +1,52 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Local Server",
+      "type": "shell",
+      "command": "node server.js",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^RoadRescue Local Server starting...",
+          "endsPattern": "^Server ready on port 8080"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false,
+        "clear": false
+      }
+    },
+    {
+      "label": "Open in Default Browser",
+      "type": "shell",
+      "command": "node -e \"const { exec } = require('child_process'); const url = 'http://localhost:8080/'; const cmd = process.platform === 'win32' ? 'start \"\" \"' + url + '\"' : (process.platform === 'darwin' ? 'open \"' + url + '\"' : 'xdg-open \"' + url + '\"'); exec(cmd);\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open in Firefox",
+      "type": "shell",
+      "command": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start firefox http://localhost:8080/' : 'firefox http://localhost:8080/'; exec(cmd);\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open in Edge",
+      "type": "shell",
+      "command": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start msedge http://localhost:8080/' : 'microsoft-edge http://localhost:8080/'; exec(cmd);\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open in Chrome",
+      "type": "shell",
+      "command": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start chrome http://localhost:8080/' : 'google-chrome http://localhost:8080/'; exec(cmd);\"",
+      "problemMatcher": []
+    }
+  ]
+}

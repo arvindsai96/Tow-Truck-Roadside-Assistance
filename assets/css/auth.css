@@ -613,6 +613,7 @@
   font-size: 0.88rem;
   font-weight: 500;
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
 }
 
