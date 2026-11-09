@@ -2,6 +2,36 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Open Vercel App in Chrome",
+      "type": "shell",
+      "command": "start chrome \"https://tow-truck-roadside-assistance.vercel.app/${fileBasename}\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open Vercel App Home Page in Chrome",
+      "type": "shell",
+      "command": "start chrome \"https://tow-truck-roadside-assistance.vercel.app/\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open Vercel App in Edge",
+      "type": "shell",
+      "command": "start msedge \"https://tow-truck-roadside-assistance.vercel.app/${fileBasename}\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open Vercel App in Default Browser",
+      "type": "shell",
+      "command": "start \"\" \"https://tow-truck-roadside-assistance.vercel.app/${fileBasename}\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open Vercel App Home Page in Default Browser",
+      "type": "shell",
+      "command": "start \"\" \"https://tow-truck-roadside-assistance.vercel.app/\"",
+      "problemMatcher": []
+    },
+    {
       "label": "Start Local Server",
       "type": "shell",
       "command": "node server.js",
@@ -23,30 +53,6 @@
         "focus": false,
         "clear": false
       }
-    },
-    {
-      "label": "Open in Default Browser",
-      "type": "shell",
-      "command": "node -e \"const { exec } = require('child_process'); const url = 'http://localhost:8080/'; const cmd = process.platform === 'win32' ? 'start \"\" \"' + url + '\"' : (process.platform === 'darwin' ? 'open \"' + url + '\"' : 'xdg-open \"' + url + '\"'); exec(cmd);\"",
-      "problemMatcher": []
-    },
-    {
-      "label": "Open in Firefox",
-      "type": "shell",
-      "command": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start firefox http://localhost:8080/' : 'firefox http://localhost:8080/'; exec(cmd);\"",
-      "problemMatcher": []
-    },
-    {
-      "label": "Open in Edge",
-      "type": "shell",
-      "command": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start msedge http://localhost:8080/' : 'microsoft-edge http://localhost:8080/'; exec(cmd);\"",
-      "problemMatcher": []
-    },
-    {
-      "label": "Open in Chrome",
-      "type": "shell",
-      "command": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start chrome http://localhost:8080/' : 'google-chrome http://localhost:8080/'; exec(cmd);\"",
-      "problemMatcher": []
     }
   ]
 }

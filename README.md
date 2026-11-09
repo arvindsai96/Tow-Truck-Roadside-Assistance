@@ -1,106 +1,63 @@
 # RoadRescue
 
-RoadRescue is a responsive, multi-page towing and roadside assistance website built with HTML5, CSS3, and vanilla JavaScript. There is no build step or package manager required.
+RoadRescue is a modern, responsive towing and roadside assistance website hosted live on Vercel.
+
+- 🌐 **Live Website Link:** [https://tow-truck-roadside-assistance.vercel.app/](https://tow-truck-roadside-assistance.vercel.app/)
+- 📦 **GitHub Repository:** [https://github.com/arvindsai96/Tow-Truck-Roadside-Assistance](https://github.com/arvindsai96/Tow-Truck-Roadside-Assistance)
 
 ---
 
 ## 🚀 Running in Visual Studio Code (F5 / Start Debugging)
 
-This project is pre-configured with VS Code debugging and automated server tasks:
+When you run the project in VS Code, it launches **directly through your live Vercel app**:
 
-1. Open the project folder in **Visual Studio Code**.
-2. Press **`F5`** or go to the menu: **`Run -> Start Debugging`**.
-3. VS Code will **automatically start the local development server** in the background and immediately open Google Chrome at `http://localhost:8080/`.
-
-> **Tip for Microsoft Edge users:** If you prefer Edge, click the Run & Debug drop-down in the left sidebar and select **`Launch Edge against localhost`**.
-
----
-
-## 🌐 Running Across Browsers & Devices
-
-### 💻 Laptop & Desktop
-
-| Browser | How to Run |
-|---|---|
-| **Google Chrome** | Press `F5` in VS Code, or run `npm run browser:chrome` |
-| **Microsoft Edge** | Select `Launch Edge against localhost` in VS Code, or run `npm run browser:edge` |
-| **Mozilla Firefox** | Run `npm run browser:firefox` or run task **Terminal -> Run Task -> Open in Firefox** |
-| **Apple Safari** (macOS) | Run `npm run browser:safari` or run task **Terminal -> Run Task -> Open in Safari (macOS)** |
-| **Default System Browser** | Run `npm run open` or `node server.js --open` |
-
----
-
-### 📱 Mobile & Tablet (iPhone, iPad, Android Phone, Android Tablet)
-
-The development server listens on `0.0.0.0`, allowing any device on the same local network to view the site live:
-
-1. Connect your **Mobile phone** or **Tablet** to the **same Wi-Fi network** as your Laptop/Desktop.
-2. Start the server (either by clicking **Run -> Start Debugging** in VS Code, or running `npm start` in the terminal).
-3. The terminal displays your network address, for example:
+1. Open any HTML file (e.g., `pricing.html`, `services.html`, or `index.html`) in **Visual Studio Code**.
+2. Press **`F5`** or go to menu: **`Run -> Start Debugging`**.
+3. Chrome will automatically open your live Vercel link path:
+   ```text
+   https://tow-truck-roadside-assistance.vercel.app/pricing.html
    ```
-   Mobile & Tablet: http://172.20.10.2:8080/
-   ```
-4. Open **Safari** (iOS/iPadOS) or **Chrome/Firefox** (Android) on your mobile device and navigate to that address.
-5. The full website will load with touch-optimized mobile navigation drawer, responsive card grids, and safe-area inset support!
-
-#### 🛠️ Mobile & Tablet Simulation in Desktop Browsers
-You can also simulate any mobile or tablet device directly inside your desktop browser:
-- **Chrome & Edge:** Press `Ctrl + Shift + M` (Mac: `Cmd + Option + M`) to toggle the Device Toolbar (emulating iPhone 14/15/16, iPad Air, iPad Pro, Samsung Galaxy, etc.).
-- **Firefox:** Press `Ctrl + Shift + M` for Responsive Design Mode.
-- **Safari:** Enable the Develop menu, then press `Cmd + Ctrl + R` for Responsive Design Mode.
+   *(Runs through your Vercel deployment — not local `D:` folder and not `localhost:8080`)*
 
 ---
 
-## ⚙️ Alternative Ways to Run
+## 📱 Running Across Devices (Mobile, Tablet, Laptop, Desktop)
 
-### Option 1: Direct File (Zero Server Required)
-If you don't want to run a local server:
-- Simply double-click **`index.html`** to open it in your browser.
-- Or in VS Code, select **`Launch Chrome (Direct File - No Server Required)`** from the Run & Debug menu.
+Because the site is hosted live on Vercel with an active SSL certificate, it works seamlessly on any browser and device worldwide without local servers or special Wi-Fi setups:
 
-### Option 2: Command Line (Node.js)
-```bash
-# Start server
-npm start
-# or
-node server.js
+| Device / Platform | Browsers | Link to Open |
+|---|---|---|
+| **Mobile** (iPhone / Android) | Safari, Chrome, Firefox, Samsung Internet | [https://tow-truck-roadside-assistance.vercel.app/](https://tow-truck-roadside-assistance.vercel.app/) |
+| **Tablet** (iPad / Android Tablet) | Safari, Chrome, Edge, Firefox | [https://tow-truck-roadside-assistance.vercel.app/](https://tow-truck-roadside-assistance.vercel.app/) |
+| **Laptop & Desktop** (PC / Mac) | Chrome, Edge, Firefox, Safari, Brave | [https://tow-truck-roadside-assistance.vercel.app/](https://tow-truck-roadside-assistance.vercel.app/) |
 
-# Start server and auto-open browser
-npm run open
-```
-
-### Option 3: Python Built-in Server
-```bash
-python -m http.server 8080 --bind 0.0.0.0
-```
-Then visit `http://localhost:8080/`.
+### Mobile & Tablet Features
+- **Responsive Drawer Navigation:** Mobile touch menu with smooth scrolling on iOS and Android.
+- **Glassmorphic Styling:** Native WebKit blur effect with `-webkit-backdrop-filter` on Apple Safari (iOS & iPadOS).
+- **Edge-to-Edge Display:** Supports modern phone notches and home indicator bars with `env(safe-area-inset-bottom)`.
+- **Fast Touch Response:** Zero 300ms mobile touch delay with `touch-action: manipulation`.
 
 ---
 
-## 📱 Responsive & Cross-Browser Design Features
+## ⚙️ VS Code Launch Configurations
 
-- **Mobile First & Fluid Breakpoints:** Fully responsive across Extra Small Mobile (<480px), Mobile (<600px), Tablet Portrait (<992px), Tablet Landscape / Laptop (<1200px), and Large Desktop (1200px+).
-- **Apple Safari Support:** Full `-webkit-backdrop-filter` support for frosted glass cards and sticky navigation, `-webkit-user-select`, and `100vh`/`100dvh` viewport height fallbacks.
-- **Notch & Home Bar Support:** `env(safe-area-inset-bottom)` and `viewport-fit=cover` for modern borderless iPhones and iPads.
-- **Fast Touch Response:** `touch-action: manipulation` eliminating 300ms mobile tap delays.
-- **No Horizontal Scroll Glitches:** `overflow-x: clip` preserving sticky navigation while preventing accidental horizontal overflows on small screens.
+In the **Run and Debug** dropdown (top-left of the debug panel), you can select:
 
----
-
-## 📄 Pages Included
-
-The site includes 30+ static pages:
-- **Public:** `index.html` (Home 1), `home-2.html` (Home 2), `about.html`, `services.html`, `service-details.html`, `coverage.html`, `pricing.html`, `blog.html`, `blog-details.html`, `contact.html`.
-- **Assistance Requests:** `request-assistance.html`, `request-details.html`, `request-history.html`, `track-request.html`.
-- **Customer Portal:** `login.html`, `register.html`, `forgot-password.html`, `customer-dashboard.html`, `customer-profile.html`.
-- **Admin Dashboard:** `admin-dashboard.html`, `admin-analytics.html`, `admin-messages.html`, `admin-requests.html`, `admin-settings.html`, `admin-users.html`.
-- **Utility & Legal:** `coming-soon.html`, `maintenance.html`, `privacy.html`, `terms.html`, `security.html`.
+1. **`Launch Vercel App in Chrome (Current Page)`** *(Default)* — Opens whichever HTML file you currently have open on Vercel (e.g. `/pricing.html`).
+2. **`Launch Vercel App in Chrome (Home Page)`** — Opens the Vercel homepage.
+3. **`Launch Vercel App in Edge (Current Page)`** — Opens the current page in Microsoft Edge.
+4. **`Launch Vercel App in Edge (Home Page)`** — Opens the Vercel homepage in Edge.
+5. **`Launch Chrome (Local File Path)`** — Opens the local file directly.
+6. **`Launch Chrome (Local Server - localhost:8080)`** — Starts the local dev server.
 
 ---
 
-## 🚢 Deploy to Vercel
+## 📄 Key Pages on Vercel
 
-1. Push this project to GitHub/GitLab/Bitbucket.
-2. In Vercel, import the repository.
-3. Framework preset: **Other**. No build command needed.
-4. Deploy! Entry point is `index.html`.
+- **Home:** [https://tow-truck-roadside-assistance.vercel.app/](https://tow-truck-roadside-assistance.vercel.app/)
+- **Pricing:** [https://tow-truck-roadside-assistance.vercel.app/pricing.html](https://tow-truck-roadside-assistance.vercel.app/pricing.html)
+- **Services:** [https://tow-truck-roadside-assistance.vercel.app/services.html](https://tow-truck-roadside-assistance.vercel.app/services.html)
+- **Request Assistance:** [https://tow-truck-roadside-assistance.vercel.app/request-assistance.html](https://tow-truck-roadside-assistance.vercel.app/request-assistance.html)
+- **Coverage Map:** [https://tow-truck-roadside-assistance.vercel.app/coverage.html](https://tow-truck-roadside-assistance.vercel.app/coverage.html)
+- **Contact:** [https://tow-truck-roadside-assistance.vercel.app/contact.html](https://tow-truck-roadside-assistance.vercel.app/contact.html)
+- **About:** [https://tow-truck-roadside-assistance.vercel.app/about.html](https://tow-truck-roadside-assistance.vercel.app/about.html)

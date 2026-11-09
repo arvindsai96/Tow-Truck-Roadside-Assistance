@@ -2,32 +2,46 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Chrome against localhost",
+      "name": "Launch Vercel App in Chrome (Current Page)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://tow-truck-roadside-assistance.vercel.app/${fileBasename}",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Vercel App in Chrome (Home Page)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://tow-truck-roadside-assistance.vercel.app/",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Vercel App in Edge (Current Page)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "https://tow-truck-roadside-assistance.vercel.app/${fileBasename}",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Vercel App in Edge (Home Page)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "https://tow-truck-roadside-assistance.vercel.app/",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Chrome (Local File Path)",
+      "type": "chrome",
+      "request": "launch",
+      "file": "${file}"
+    },
+    {
+      "name": "Launch Chrome (Local Server - localhost:8080)",
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:8080/",
       "webRoot": "${workspaceFolder}",
       "preLaunchTask": "Start Local Server"
-    },
-    {
-      "name": "Launch Edge against localhost",
-      "type": "msedge",
-      "request": "launch",
-      "url": "http://localhost:8080/",
-      "webRoot": "${workspaceFolder}",
-      "preLaunchTask": "Start Local Server"
-    },
-    {
-      "name": "Launch Chrome (Direct File - No Server Required)",
-      "type": "chrome",
-      "request": "launch",
-      "file": "${workspaceFolder}/index.html"
-    },
-    {
-      "name": "Launch Edge (Direct File - No Server Required)",
-      "type": "msedge",
-      "request": "launch",
-      "file": "${workspaceFolder}/index.html"
     }
   ]
 }

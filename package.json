@@ -4,18 +4,18 @@
   "description": "24/7 Tow Truck & Roadside Assistance Website",
   "main": "server.js",
   "scripts": {
+    "open:vercel": "node -e \"const { exec } = require('child_process'); const url = 'https://tow-truck-roadside-assistance.vercel.app/'; const cmd = process.platform === 'win32' ? 'start \"\" \"' + url + '\"' : (process.platform === 'darwin' ? 'open \"' + url + '\"' : 'xdg-open \"' + url + '\"'); exec(cmd);\"",
+    "open:vercel:chrome": "node -e \"const { exec } = require('child_process'); const url = 'https://tow-truck-roadside-assistance.vercel.app/'; const cmd = process.platform === 'win32' ? 'start chrome \"' + url + '\"' : 'google-chrome \"' + url + '\"'; exec(cmd);\"",
+    "open:vercel:edge": "node -e \"const { exec } = require('child_process'); const url = 'https://tow-truck-roadside-assistance.vercel.app/'; const cmd = process.platform === 'win32' ? 'start msedge \"' + url + '\"' : 'microsoft-edge \"' + url + '\"'; exec(cmd);\"",
     "start": "node server.js",
     "dev": "node server.js",
-    "open": "node server.js --open",
-    "browser:chrome": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start chrome http://localhost:8080/' : 'google-chrome http://localhost:8080/'; exec(cmd);\"",
-    "browser:edge": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start msedge http://localhost:8080/' : 'microsoft-edge http://localhost:8080/'; exec(cmd);\"",
-    "browser:firefox": "node -e \"const { exec } = require('child_process'); const cmd = process.platform === 'win32' ? 'start firefox http://localhost:8080/' : 'firefox http://localhost:8080/'; exec(cmd);\"",
-    "browser:safari": "node -e \"const { exec } = require('child_process'); exec('open -a Safari http://localhost:8080/');\""
+    "open:local": "node server.js --open"
   },
   "keywords": [
     "roadside-assistance",
     "tow-truck",
     "responsive-website",
+    "vercel",
     "html5",
     "css3",
     "javascript"
