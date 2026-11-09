@@ -293,7 +293,56 @@
       ]
     },
     { id: "long-distance-transport", title: "Vehicle transport", category: "Towing", icon: "bi-arrow-left-right", image: "assets/images/blog/vehicle-maintenance.jpg", summary: "Planned vehicle transport for longer trips, relocations, or shop transfers.", details: "Scheduled transport is arranged around vehicle condition, pickup and delivery access, timing, and distance. Confirm the vehicle's operability and any special handling needs when requesting a quote.", included: ["Pickup and delivery locations recorded", "Vehicle condition and handling requirements noted", "Timing and quote confirmed before booking"], when: "A vehicle needs to be moved between locations without being driven.", faqs: [{ question: "What details should I provide when booking vehicle transport?", answer: "Share the pickup and delivery addresses, vehicle make and model, whether it runs, its approximate size, and any access restrictions. Provide your preferred dates and mention modifications or low ground clearance that may affect loading." }, { question: "Can a non-running vehicle be transported?", answer: "Often, but the provider needs to know whether it can roll, steer, and brake. Non-running vehicles may require special loading equipment or incur additional charges, so describe the condition before booking." }, { question: "How should I prepare the vehicle for pickup?", answer: "Follow the provider's instructions. Typically, remove personal belongings and loose accessories, leave only the agreed fuel level, and make sure the vehicle is accessible. Ask whether keys must be provided and document the vehicle's condition at handoff." }, { question: "Can I choose the pickup and delivery dates?", answer: "You can request preferred dates, but availability and timing depend on the route, schedule, and transport method. Confirm the pickup window, estimated delivery date, and how you will receive updates." }, { question: "Will the vehicle be driven during transport?", answer: "Transport methods vary. Confirm whether your vehicle will be loaded onto a carrier or moved another way, and ask how it will be secured and whether additional mileage or handling is expected." }, { question: "What should I confirm in the transport quote?", answer: "Ask whether the quote includes pickup, delivery, distance, loading, fuel or toll charges, insurance or coverage terms, and any access or waiting fees. Confirm cancellation terms and the process for noting existing damage before you book." }] },
-    { id: "fleet-assistance", title: "Fleet roadside assistance", category: "Commercial", icon: "bi-collection-fill", image: "assets/images/fleet/fleet-roadside-response.jpg", imageAlt: "RACQ traffic response vehicle providing roadside assistance in Brisbane", imageWidth: 1280, imageHeight: 909, imageCredit: `Photo by <a href="https://commons.wikimedia.org/wiki/File:RACQ_Traffic_Response_Unit,_Roadside_assistance_vehicle_in_Brisbane,_Queensland.jpg" target="_blank" rel="noopener noreferrer">Kgbo via Wikimedia Commons</a>; cropped to fit. Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.`, summary: "A single point of contact for roadside support across a business fleet.", details: "Fleet assistance helps businesses coordinate service requests for multiple vehicles. A program can be configured around fleet size, operating hours, service areas, approvals, and reporting needs.", included: ["Fleet and dispatch requirements reviewed", "Service-area and authorization preferences documented", "A proposed support workflow for your team"], when: "Your organization needs a consistent way to request and track vehicle support.", faqs: [{ question: "What information is needed to set up fleet roadside assistance?", answer: "A provider may ask for fleet size, vehicle types, operating locations, service hours, preferred contacts, approval rules, and reporting needs. Identify any vehicle groups or routes that require special handling." }, { question: "How can drivers request assistance through a fleet program?", answer: "Ask the provider how drivers should submit a request, what details they need to provide, and how dispatch updates will reach both the driver and fleet contact. Share the process with drivers before an incident occurs." }, { question: "Can a fleet require approval before service is authorized?", answer: "Many programs can define authorization steps, but options vary by provider. Confirm who can approve service, how urgent requests are handled, and whether spending limits or after-hours exceptions apply." }, { question: "Does fleet assistance cover every vehicle and location?", answer: "Coverage depends on the program terms, vehicle types, service area, and provider availability. Review exclusions and confirm how to request help when a vehicle is outside the normal coverage area." }, { question: "Can fleet managers track requests and costs?", answer: "Reporting varies by provider. Ask what request status, service details, invoices, and usage reports are available, how often they are provided, and who can access them." }, { question: "What should we compare when choosing a fleet roadside provider?", answer: "Compare service area, supported vehicle types, response process, hours, approval controls, reporting, billing, and escalation support. Review the full fees and service terms before enrolling the fleet." }] },
+    {
+      id: "fleet-assistance",
+      title: "Fleet roadside assistance",
+      category: "Commercial",
+      icon: "bi-buildings-fill",
+      image: "assets/images/services/fleet-assistance-service.jpg",
+      imageAlt: "Commercial roadside assistance headquarters with fleet service vans and utility trucks in designated response bays",
+      imageCaption: "Dedicated commercial fleet response units, mobile workshop vans, and utility trucks ready for priority dispatch",
+      imageWidth: 1376,
+      imageHeight: 768,
+      summary: "Dedicated 24/7 priority roadside support, SLA dispatch routing, and consolidated billing for business fleets.",
+      details: "Commercial fleet downtime directly impacts your bottom line, customer promises, and driver productivity. RoadRescue's Fleet & Business Vehicle program provides a single point of contact for delivery vans, service trucks, contractor pickups, and executive company cars. With guaranteed sub-25 minute priority dispatch SLAs, dedicated account managers, digital driver authorization controls, and consolidated monthly invoicing, we keep your commercial operations moving without administrative friction.",
+      included: [
+        "Dedicated 24/7 commercial fleet dispatch hotline & priority routing queue",
+        "Customized Service Level Agreements (SLAs) with sub-25 minute response targets",
+        "Support for delivery vans (Sprinter, Transit, Promaster), box trucks, and pickups",
+        "On-site lockouts, jump starts, mobile tire service, fuel delivery, and flatbed towing",
+        "Pre-authorized driver spending limits and manager approval workflows",
+        "Consolidated monthly invoicing with vehicle ID and driver mileage breakdown",
+        "Dedicated corporate account manager with quarterly performance reviews"
+      ],
+      when: "Your business operates 3 or more commercial vehicles (delivery, trade, sales, or logistics) and needs dependable, prioritized roadside assistance.",
+      extraVisualSection: `
+        <div class="detail-feature-card page-panel">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <img class="detail-feature-image" src="assets/images/services/fleet-dispatch-command.jpg" alt="Fleet dispatch command center with live GPS vehicle tracking and telemetry monitors" width="1376" height="768" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <span class="category-pill mb-2"><i class="bi bi-shield-check me-1" aria-hidden="true"></i> Priority SLA Routing</span>
+              <h3 class="h4">24/7 Command Center &amp; Live Telematics</h3>
+              <p>Fleet managers gain total visibility with our state-of-the-art dispatch operations center. We integrate with your existing GPS telematics to track incident status in real time, minimize vehicle downtime, and coordinate seamless repair shop transfers.</p>
+              <ul class="check-list mt-2">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Real-time GPS dispatch tracking and driver ETA notifications</span></li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Sub-25 minute priority SLA dispatch for registered corporate fleets</span></li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Zero out-of-pocket driver expenses with direct central billing</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      `,
+      faqs: [
+        { question: "What fleet sizes are eligible for commercial roadside assistance?", answer: "We support fleets of all sizes—from small businesses with 3 to 10 service vans, mid-size commercial fleets of 11 to 25 vehicles, to enterprise logistics operations with 26+ heavy and mixed commercial trucks. Each tier receives customized pricing discounts and dedicated account management." },
+        { question: "How do our drivers request roadside assistance when a breakdown occurs?", answer: "Drivers can call our dedicated 24/7 commercial fleet hotline, use our mobile web portal, or provide their vehicle ID/VIN. Dispatch immediately verifies company authorization, routes the nearest recovery unit, and sends live SMS tracking updates to both the driver and the fleet manager." },
+        { question: "Can we set spending limits or require manager approvals before service?", answer: "Yes. Fleet administrators can customize authorization protocols—such as pre-authorizing standard roadside fixes (jump starts, tire changes, lockout assistance) while requiring manager sign-off for long-distance towing or specialized mechanical recovery." },
+        { question: "How does billing and invoicing work for commercial accounts?", answer: "Instead of drivers paying out of pocket and submitting expense reports, all services are billed centrally to your corporate account. You receive an itemized monthly invoice detailing the vehicle ID, driver name, service performed, timestamp, and location." },
+        { question: "What types of commercial vehicles are covered?", answer: "We cover light-duty company sedans, cargo vans (Ford Transit, Mercedes Sprinter, RAM ProMaster), utility service pickups (F-250/F-350, Silverado), flatbeds, and medium-duty delivery box trucks." },
+        { question: "What Service Level Agreements (SLAs) do you guarantee?", answer: "Enterprise and commercial contract accounts benefit from our sub-25 minute priority dispatch response SLA across metro areas, guaranteed priority call-queue access, and 99.5% uptime coverage for scheduled fleet transfers." }
+      ]
+    },
     {
       id: "mobile-mechanic",
       title: "Mobile mechanic",
@@ -355,9 +404,7 @@
       serviceDetails.innerHTML = `<div class="results-empty"><h2>Choose a service to explore</h2><p>Select one of our roadside or recovery services to see what to expect.</p><a class="button button--primary" href="services.html">Browse all services</a></div>`;
     } else {
       document.title = `${service.title} | RoadRescue`;
-      if (service.id === "fleet-assistance") {
-        serviceDetails.closest(".section")?.classList.add("fleet-assistance-detail-section");
-      }
+      // standard section layout across all services
       const showImageCredit = service.imageCredit && !["vehicle-recovery", "fleet-assistance", "mobile-mechanic"].includes(service.id);
       const detailImage = `<img class="detail-image${showImageCredit ? " detail-image--cropped" : ""}${service.id === "vehicle-recovery" ? " detail-image--vehicle-recovery" : ""}${service.id === "fleet-assistance" ? " detail-image--fleet-assistance" : ""}" src="${service.image}" alt="${service.imageAlt || `${service.title} roadside assistance`}"${service.imageWidth ? ` width="${service.imageWidth}"` : ""}${service.imageHeight ? ` height="${service.imageHeight}"` : ""} fetchpriority="high">`;
       const detailImageMarkup = showImageCredit
@@ -386,7 +433,7 @@
         <div class="detail-layout">
           <article class="detail-copy">
             <header class="detail-header">
-              ${service.id === "fleet-assistance" ? "" : `<span class="category-pill"><i class="bi ${service.icon} me-1" aria-hidden="true"></i>${service.category}</span>`}
+              <span class="category-pill"><i class="bi ${service.icon} me-1" aria-hidden="true"></i>${service.category}</span>
               <h1 class="detail-title detail-title--${service.id}">${service.title}</h1>
               <p class="page-hero__lead">${service.summary}</p>
             </header>
