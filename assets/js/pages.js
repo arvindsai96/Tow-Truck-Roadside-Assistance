@@ -297,9 +297,9 @@
       title: "Vehicle transport",
       category: "Transport",
       icon: "bi-truck",
-      image: "assets/images/services/vehicle-transport-service.jpg",
-      imageAlt: "Heavy-duty commercial auto transport carrier hauling multi-vehicle shipment for relocations and long-distance transport",
-      imageCaption: "Multi-vehicle commercial carrier equipped for inter-city relocations, dealership transfers, and long-distance transport",
+      image: "assets/images/services/vehicle-recovery-detail.jpg",
+      imageAlt: "Roadside recovery operator winching a disabled car from a roadside embankment",
+      imageCaption: "Specialist winch recovery for a vehicle that cannot safely continue its journey",
       imageWidth: 1376,
       imageHeight: 768,
       summary: "Planned vehicle transport for interstate trips, relocations, seasonal snowbirds, and shop transfers.",
@@ -347,9 +347,9 @@
       title: "Fleet roadside assistance",
       category: "Commercial",
       icon: "bi-buildings-fill",
-      image: "assets/images/services/fleet-assistance-service.jpg",
-      imageAlt: "Commercial roadside assistance headquarters with fleet service vans and utility trucks in designated response bays",
-      imageCaption: "Dedicated commercial fleet response units, mobile workshop vans, and utility trucks ready for priority dispatch",
+      image: "assets/images/services/roadside-repair.jpg",
+      imageAlt: "Roadside technician using a vehicle-entry tool to assist a driver in a commercial parking lot",
+      imageCaption: "On-site vehicle assistance for a business fleet vehicle",
       imageWidth: 1376,
       imageHeight: 768,
       summary: "Dedicated 24/7 priority roadside support, SLA dispatch routing, and consolidated billing for business fleets.",
@@ -419,7 +419,7 @@
 
   const posts = [
     { id: "breakdown-safety", title: "What to do when your car breaks down", category: "Safety", date: "October 21, 2026", read: "5 min read", image: "assets/images/blog/blog-breakdown-safety.jpg", alt: "Passenger car safely pulled onto highway shoulder with hazard triangles and response vehicle", intro: "A breakdown can be unsettling, especially in traffic or poor weather. A few calm, safety-first steps can help you protect yourself while arranging support.", sections: ["Move away from traffic if you can do so safely. Turn on hazard lights and use a safe pull-off area when possible.", "Stay aware of your surroundings. If your vehicle is exposed to moving traffic, remain inside with your seat belt on unless staying there is more dangerous.", "Share your location clearly when requesting help. Road names, mile markers, landmarks, and travel direction all help responders find you.", "Avoid attempting repairs in an unsafe location. If the scene feels dangerous, contact emergency services before roadside support."] },
-    { id: "flat-tire-guide", title: "A practical guide to handling a flat tire", category: "Maintenance", date: "October 14, 2026", read: "4 min read", image: "assets/images/blog/blog-flat-tire-safety.jpg", alt: "Roadside technician changing flat tire on car using hydraulic jack and torque wrench", intro: "A damaged tire does not always mean the same repair is appropriate. Start with a safe location and a quick check before deciding what to do next.", sections: ["Pull over to a firm, level area well away from traffic if possible, then switch on hazard lights.", "Check whether your vehicle has a spare, jack, and wheel-lock key. Do not work beside fast-moving traffic or on unstable ground.", "If a tire is shredded, a wheel is damaged, or you do not have the right equipment, request roadside help or a tow.", "Have the tire inspected by a qualified shop before continuing a longer trip."] },
+    { id: "flat-tire-guide", title: "A practical guide to handling a flat tire", category: "Maintenance", date: "October 14, 2026", read: "4 min read", image: "assets/images/blog/blog-flat-tire-safety.jpg", alt: "Roadside technician changing flat tire on car using hydraulic jack and torque wrench", detailImage: "assets/images/blog/blog-tow-selection.jpg", detailAlt: "Roadside recovery operator loading a car onto a flatbed truck on a highway shoulder", intro: "A damaged tire does not always mean the same repair is appropriate. Start with a safe location and a quick check before deciding what to do next.", sections: ["Pull over to a firm, level area well away from traffic if possible, then switch on hazard lights.", "Check whether your vehicle has a spare, jack, and wheel-lock key. Do not work beside fast-moving traffic or on unstable ground.", "If a tire is shredded, a wheel is damaged, or you do not have the right equipment, request roadside help or a tow.", "Have the tire inspected by a qualified shop before continuing a longer trip."] },
     { id: "battery-warning-signs", title: "Battery warning signs drivers should know", category: "Maintenance", date: "October 7, 2026", read: "4 min read", image: "assets/images/blog/blog-battery-diagnostics.jpg", alt: "Automotive technician testing car battery with digital diagnostic analyzer under open hood", intro: "Slow cranking and dim lights can be signs of a weak battery, but charging-system issues may look similar. Recognizing the clues helps you plan a safe next step.", sections: ["Notice slow engine cranking, dim headlights, or dashboard warnings, especially after the vehicle has been parked.", "Check for visible damage or a strong sulfur smell without touching leaking or swollen batteries.", "If a boost is attempted, use the vehicle manufacturer's jump-start points and instructions. Incorrect connections can cause injury or damage.", "A battery that repeatedly loses charge should be tested along with the vehicle's charging system."] },
     { id: "motorcycle-trip-checklist", title: "A quick motorcycle trip checklist", category: "Travel", date: "September 30, 2026", read: "6 min read", image: "assets/images/blog/motorcycle-travel.jpg", alt: "Motorcycle on a roadway prepared for travel", intro: "A short pre-ride check can catch common issues before they turn into a roadside delay. Use your owner's manual for model-specific requirements.", sections: ["Check tire condition and pressure while the tires are cool, using the recommended figures for your motorcycle.", "Test lights, indicators, horn, and brakes before setting off.", "Secure luggage and carry basic identification, emergency contacts, and protective equipment.", "Plan a route with realistic fuel stops and check weather and road conditions before departure."] },
     { id: "running-out-of-fuel", title: "If you run out of fuel on the road", category: "Safety", date: "September 23, 2026", read: "3 min read", image: "assets/images/blog/blog-fuel-delivery.jpg", alt: "Roadside service technician refueling car on shoulder with safety fuel can", intro: "Running out of fuel can happen on an unfamiliar route or in heavy traffic. Focus first on reaching a safe place and making your location easy to identify.", sections: ["Use remaining momentum only to reach a safe stopping point; do not walk along a highway to find fuel.", "Turn on hazard lights and follow local road-safety guidance for your location.", "Share the fuel type, vehicle location, and access restrictions when asking about delivery.", "If fuel delivery is unavailable or the vehicle is in a dangerous position, ask about a safe relocation or towing option."] },
@@ -623,8 +623,8 @@
             <h1>${post.title}</h1>
             <div class="article-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i>${post.date}</span><span>${post.read}</span><span>RoadRescue Team</span></div>
             <figure class="article-detail-figure">
-              <img class="detail-image article-detail-image" src="${post.image}" alt="${post.alt}" fetchpriority="high" width="1280" height="720">
-              <figcaption class="article-detail-caption"><i class="bi bi-camera-fill text-accent" aria-hidden="true"></i> <span>${post.alt}</span></figcaption>
+              <img class="detail-image article-detail-image" src="${post.detailImage || post.image}" alt="${post.detailAlt || post.alt}" fetchpriority="high" width="1280" height="720">
+              <figcaption class="article-detail-caption"><i class="bi bi-camera-fill text-accent" aria-hidden="true"></i> <span>${post.detailAlt || post.alt}</span></figcaption>
             </figure>
             <p class="page-hero__lead">${post.intro}</p>
             ${post.sections.map((paragraph, index) => `<h2>${["Start with safety", "Check what is practical", "Ask for the right support", "Plan the next step"][index] || "A safer next step"}</h2><p>${paragraph}</p>`).join("")}

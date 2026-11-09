@@ -2603,21 +2603,26 @@
 }
 
 .article-detail-figure {
-  margin: 1.75rem 0 2rem;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
+  width: 100%;
+  margin: 1.75rem 0 2rem;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
   background: var(--color-surface);
 }
 
 .article-detail-figure .detail-image {
-  margin-block-end: 0;
-  border-radius: 0;
-  aspect-ratio: 16 / 9;
-  max-height: 28rem;
-  object-fit: cover;
-}
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-block-end: 0;
+  border-radius: 0;
+  aspect-ratio: 16 / 9;
+  max-height: 28rem;
+  object-fit: cover;
+  object-position: center;
+}
 
 .article-detail-caption {
   display: flex;
