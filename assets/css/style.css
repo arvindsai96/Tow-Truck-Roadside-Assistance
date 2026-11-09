@@ -178,6 +178,7 @@ p {
   font-weight: 800;
   line-height: 1.2;
   text-align: center;
+  white-space: nowrap;
   transition: background-color var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
 }
 

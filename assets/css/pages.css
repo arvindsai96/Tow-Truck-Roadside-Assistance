@@ -2874,10 +2874,11 @@
 }
 
 .pricing-table .button {
-  width: 100%;
-  max-width: 11rem;
+  width: max-content;
+  max-width: none;
   margin-inline: auto;
   justify-content: center;
+  white-space: nowrap;
 }
 
 /* On-Demand Pay-As-You-Go Rates */
@@ -3267,4 +3268,25 @@
     font-size: clamp(1.65rem, 6vw, 2.1rem);
     line-height: 1.25;
   }
+}
+/* Pricing Buttons Single Line Layout */
+.pricing-page .button,
+.pricing-table .button,
+.pricing-tier-card .button {
+  white-space: nowrap !important;
+  text-align: center;
+}
+
+.pricing-table td .button {
+  display: inline-flex;
+  width: auto;
+  min-width: max-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 0.65rem 1.25rem;
+}
+
+.pricing-tier-card__footer .button {
+  width: 100%;
+  justify-content: center;
 }
