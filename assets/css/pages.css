@@ -2629,3 +2629,559 @@
   background: var(--color-surface);
   border-block-start: 1px solid var(--color-border);
 }
+
+/* ==========================================================================
+   PRICING PAGE MODERN ENHANCEMENTS
+   ========================================================================== */
+
+/* Hero Jump Navigation */
+.pricing-jump-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block-start: 1.75rem;
+}
+
+.pricing-jump-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.15rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-radius: 999px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.pricing-jump-nav a:hover {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+/* Pricing Section Headings */
+.pricing-heading {
+  text-align: center;
+  max-width: 44rem;
+  margin-inline: auto;
+  margin-block-end: 2.75rem;
+}
+
+.pricing-heading h2 {
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-block-end: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.pricing-heading p {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 3-Column Membership Tier Cards */
+.pricing-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+  margin-block-end: 3.5rem;
+  align-items: stretch;
+}
+
+.pricing-tier-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2.35rem 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.pricing-tier-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+.pricing-tier-card--popular {
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 14px 40px rgba(255, 107, 44, 0.16);
+}
+
+.pricing-tier-card__popular-badge {
+  position: absolute;
+  top: -0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 1.15rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(255, 107, 44, 0.35);
+  white-space: nowrap;
+}
+
+.pricing-tier-card__header {
+  text-align: center;
+  padding-block-end: 1.5rem;
+  border-block-end: 1px solid var(--color-border);
+}
+
+.pricing-tier-card__tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  margin-block-end: 0.35rem;
+}
+
+.pricing-tier-card__title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-block-end: 0.5rem;
+}
+
+.pricing-tier-card__subtitle {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.pricing-tier-card__price-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-block: 1rem 0.25rem;
+}
+
+.pricing-tier-card__currency {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.pricing-tier-card__amount {
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+}
+
+.pricing-tier-card__period {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.pricing-tier-card__monthly-note {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.pricing-tier-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex-grow: 1;
+}
+
+.pricing-tier-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.93rem;
+  color: var(--color-text);
+  line-height: 1.45;
+  text-align: start;
+}
+
+.pricing-tier-card__feature i {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  margin-block-start: 0.12rem;
+}
+
+.pricing-tier-card__feature i.bi-check-circle-fill {
+  color: var(--color-success);
+}
+
+.pricing-tier-card__feature i.bi-x-circle {
+  color: var(--color-text-muted);
+  opacity: 0.4;
+}
+
+.pricing-tier-card__feature--disabled {
+  color: var(--color-text-muted);
+  opacity: 0.65;
+}
+
+.pricing-tier-card__footer {
+  margin-block-start: auto;
+  padding-block-start: 1rem;
+}
+
+.pricing-tier-card__footer .button {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Pricing Table Refinements & Alignment */
+.pricing-table-wrap {
+  margin-block-end: 2rem;
+}
+
+.pricing-table thead th:first-child,
+.pricing-table tbody th {
+  text-align: start;
+  font-weight: 800;
+}
+
+.pricing-table thead th:not(:first-child),
+.pricing-table tbody td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pricing-table .bi-check-lg {
+  color: var(--color-success);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.pricing-table .button {
+  width: 100%;
+  max-width: 11rem;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+/* On-Demand Pay-As-You-Go Rates */
+.ondemand-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-block-end: 2rem;
+}
+
+.ondemand-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.35rem 1.6rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ondemand-card:hover {
+  transform: translateX(4px);
+  border-color: var(--color-accent);
+}
+
+.ondemand-card__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.ondemand-card__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 1.35rem;
+}
+
+.ondemand-card__text h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.ondemand-card__text p {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+.ondemand-card__rate {
+  text-align: end;
+  flex-shrink: 0;
+}
+
+.ondemand-card__price {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--color-accent);
+  letter-spacing: -0.02em;
+}
+
+.ondemand-card__unit {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+/* Fleet & Commercial Pricing Box */
+.fleet-pricing-box {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1a2c42 100%);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: 2.75rem;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+  margin-block-end: 2rem;
+}
+
+.fleet-pricing-box h2 {
+  color: #fff;
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+  font-weight: 800;
+  margin-block-end: 0.85rem;
+}
+
+.fleet-pricing-box p {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-block-end: 1.5rem;
+}
+
+.fleet-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.fleet-tier {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fleet-tier strong {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.fleet-tier span {
+  color: #fdba74;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+/* Cost Factors 4-Grid */
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-block-end: 2rem;
+}
+
+.factor-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.6rem 1.4rem;
+  text-align: start;
+  box-shadow: var(--shadow-sm);
+}
+
+.factor-card .icon-tile {
+  margin-block-end: 1rem;
+}
+
+.factor-card h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-block-end: 0.5rem;
+}
+
+.factor-card p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Guarantee Pillars 3-Grid */
+.guarantee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-block-end: 2rem;
+}
+
+.guarantee-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.65rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.guarantee-card__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 1.65rem;
+  margin-block-end: 1rem;
+}
+
+.guarantee-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-block-end: 0.5rem;
+}
+
+.guarantee-card p {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Pricing FAQ 2-Grid */
+.pricing-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-block-end: 2rem;
+}
+
+.faq-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.65rem 1.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-card h3 {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  line-height: 1.4;
+}
+
+.faq-card h3 i {
+  color: var(--color-accent);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  margin-block-start: 0.1rem;
+}
+
+.faq-card p {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin: 0;
+  padding-inline-start: 1.8rem;
+}
+
+/* Responsive Rules for Pricing */
+@media (max-width: 991.98px) {
+  .pricing-tiers-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    max-width: 28rem;
+    margin-inline: auto;
+  }
+  .pricing-tier-card--popular {
+    transform: none;
+  }
+  .ondemand-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  .fleet-pricing-box {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .factors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .pricing-faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .guarantee-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .factors-grid {
+    grid-template-columns: 1fr;
+  }
+  .ondemand-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .ondemand-card__rate {
+    text-align: start;
+    width: 100%;
+    padding-block-start: 0.65rem;
+    border-block-start: 1px dashed var(--color-border);
+  }
+  .faq-card p {
+    padding-inline-start: 0;
+  }
+}

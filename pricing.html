@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Compare illustrative RoadRescue roadside assistance plans and service options.">
+    <meta name="description" content="Compare RoadRescue transparent roadside assistance plans and upfront pay-as-you-go emergency towing rates. No hidden fees, 24/7 dispatch.">
     <meta name="theme-color" content="#101c2c">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Roadside Assistance Plans & Pricing | RoadRescue">
-    <meta property="og:description" content="Compare sample membership features and understand what affects service pricing.">
-    <meta property="og:url" content="https://roadrescue.example.com/pricing.html">
-    <link rel="canonical" href="https://roadrescue.example.com/pricing.html">
+    <meta property="og:title" content="Roadside Assistance Plans & Transparent Pricing | RoadRescue">
+    <meta property="og:description" content="Compare 24/7 membership protection plans, transparent on-demand towing rates, fleet discounts, and upfront pricing guarantees.">
+    <meta property="og:url" content="https://tow-truck-roadside-assistance.vercel.app/pricing.html">
+    <link rel="canonical" href="https://tow-truck-roadside-assistance.vercel.app/pricing.html">
     <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,62 +21,620 @@
     <link rel="stylesheet" href="assets/css/themes.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
     <link rel="stylesheet" href="assets/css/pages.css">
-    <title>Roadside Assistance Plans & Pricing | RoadRescue</title>
+    <title>Roadside Assistance Plans & Transparent Pricing | RoadRescue</title>
     <script src="assets/js/components.js" defer></script>
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/theme.js" defer></script>
     <script src="assets/js/rtl.js" defer></script>
   </head>
-  <body>
+  <body class="pricing-page">
     <site-header></site-header>
     <main id="main-content">
+
+      <!-- Hero Header Section -->
       <section class="page-hero" aria-labelledby="page-title">
         <div class="container page-hero__inner">
-          <ul class="breadcrumb" aria-label="Breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Pricing</li></ul>
-          <p class="eyebrow">Straightforward options</p>
-          <h1 id="page-title">Compare roadside support plans</h1>
-          <p class="page-hero__lead">Choose a sample plan to start the conversation. These figures and features are editable template content, not a binding offer or final service quote.</p>
+          <ul class="breadcrumb" aria-label="Breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Pricing</li>
+          </ul>
+          <p class="eyebrow"><i class="bi bi-shield-check" aria-hidden="true"></i> Upfront &amp; Honest Pricing</p>
+          <h1 id="page-title">Roadside Assistance Plans &amp; Transparent Rates</h1>
+          <p class="page-hero__lead">Choose an annual membership tier for year-round protection, or pay only when you need emergency roadside assistance. Upfront quotes with zero hidden hookup charges or surprise dispatch fees.</p>
+          
+          <!-- Jump Navigation -->
+          <nav class="pricing-jump-nav" aria-label="Jump to pricing sections">
+            <a href="#annual-plans"><i class="bi bi-award" aria-hidden="true"></i> Annual Member Plans</a>
+            <a href="#on-demand"><i class="bi bi-lightning-charge" aria-hidden="true"></i> On-Demand Rates</a>
+            <a href="#comparison-table"><i class="bi bi-table" aria-hidden="true"></i> Plan Comparison</a>
+            <a href="#fleet"><i class="bi bi-truck-front" aria-hidden="true"></i> Fleet Accounts</a>
+            <a href="#cost-factors"><i class="bi bi-calculator" aria-hidden="true"></i> Cost Factors</a>
+            <a href="#faqs"><i class="bi bi-question-circle" aria-hidden="true"></i> Pricing FAQs</a>
+          </nav>
         </div>
       </section>
-      <section class="section">
+
+      <!-- Section 1: Annual Membership Plans (3-Card Visual Grid) -->
+      <section class="section" id="annual-plans" aria-labelledby="annual-plans-title">
         <div class="container">
-          <div class="pricing-intro">
-            <div><p class="eyebrow">Illustrative membership plans</p><h2>Pick the level that fits your driving</h2></div>
-            <a class="button button--secondary" href="contact.html">Ask about fleet pricing</a>
+          <div class="pricing-heading">
+            <p class="eyebrow">Year-Round Peace of Mind</p>
+            <h2 id="annual-plans-title">Choose Your Roadside Membership Plan</h2>
+            <p>Save money and guarantee fast response times with annual coverage starting at just $4.90 per month. Includes free towing miles and full roadside coordination.</p>
           </div>
-          <p class="demo-notice mb-4"><strong>Pricing note:</strong> Sample annual membership prices and plan features must be reviewed and replaced with current business terms before publication. Towing mileage, local fees, parts, fuel, and taxes may be additional.</p>
+
+          <div class="pricing-tiers-grid">
+            
+            <!-- Tier 1: Essential -->
+            <article class="pricing-tier-card">
+              <div class="pricing-tier-card__header">
+                <span class="pricing-tier-card__tag">Basic Protection</span>
+                <h3 class="pricing-tier-card__title">Essential</h3>
+                <p class="pricing-tier-card__subtitle">Ideal for local city commuters &amp; secondary cars</p>
+                <div class="pricing-tier-card__price-box">
+                  <span class="pricing-tier-card__currency">$</span>
+                  <span class="pricing-tier-card__amount">59</span>
+                  <span class="pricing-tier-card__period">/year</span>
+                </div>
+                <p class="pricing-tier-card__monthly-note">Just $4.92 / month billed annually</p>
+              </div>
+
+              <ul class="pricing-tier-card__features" aria-label="Essential plan features">
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Up to 2 service calls</strong> included per year</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Free 5-mile towing</strong> per incident</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Battery jump-start</strong> &amp; voltage check</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Flat tire change</strong> with your spare</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>24/7 dedicated dispatch</strong> hotline</span>
+                </li>
+                <li class="pricing-tier-card__feature pricing-tier-card__feature--disabled">
+                  <i class="bi bi-x-circle" aria-hidden="true"></i>
+                  <span>Lockout entry assistance ($25 copay)</span>
+                </li>
+                <li class="pricing-tier-card__feature pricing-tier-card__feature--disabled">
+                  <i class="bi bi-x-circle" aria-hidden="true"></i>
+                  <span>Free emergency fuel delivery</span>
+                </li>
+                <li class="pricing-tier-card__feature pricing-tier-card__feature--disabled">
+                  <i class="bi bi-x-circle" aria-hidden="true"></i>
+                  <span>Winch-out &amp; ditch extraction</span>
+                </li>
+              </ul>
+
+              <div class="pricing-tier-card__footer">
+                <a class="button button--secondary" href="contact.html?plan=essential">Choose Essential Plan</a>
+              </div>
+            </article>
+
+            <!-- Tier 2: Plus (Featured / Most Popular) -->
+            <article class="pricing-tier-card pricing-tier-card--popular">
+              <span class="pricing-tier-card__popular-badge">⭐ Most Popular Choice</span>
+              <div class="pricing-tier-card__header">
+                <span class="pricing-tier-card__tag">Recommended Coverage</span>
+                <h3 class="pricing-tier-card__title">Plus Protection</h3>
+                <p class="pricing-tier-card__subtitle">Perfect for daily highway commuters &amp; family vehicles</p>
+                <div class="pricing-tier-card__price-box">
+                  <span class="pricing-tier-card__currency">$</span>
+                  <span class="pricing-tier-card__amount">99</span>
+                  <span class="pricing-tier-card__period">/year</span>
+                </div>
+                <p class="pricing-tier-card__monthly-note">Just $8.25 / month billed annually</p>
+              </div>
+
+              <ul class="pricing-tier-card__features" aria-label="Plus plan features">
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Up to 4 service calls</strong> included per year</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Free 15-mile towing</strong> per incident</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Battery jump-start</strong> &amp; mobile testing</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Flat tire change</strong> or mobile repair</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Free vehicle lockout service</strong> ($0 copay)</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Free emergency fuel delivery</strong> (fuel included)</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Minor ditch winching</strong> (within 30 feet)</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Priority rapid dispatch</strong> queue</span>
+                </li>
+              </ul>
+
+              <div class="pricing-tier-card__footer">
+                <a class="button button--primary" href="contact.html?plan=plus">Get Plus Protection</a>
+              </div>
+            </article>
+
+            <!-- Tier 3: Premier -->
+            <article class="pricing-tier-card">
+              <div class="pricing-tier-card__header">
+                <span class="pricing-tier-card__tag">Maximum Protection</span>
+                <h3 class="pricing-tier-card__title">Premier Roadmaster</h3>
+                <p class="pricing-tier-card__subtitle">Complete security for long-distance drivers, SUVs &amp; RVs</p>
+                <div class="pricing-tier-card__price-box">
+                  <span class="pricing-tier-card__currency">$</span>
+                  <span class="pricing-tier-card__amount">149</span>
+                  <span class="pricing-tier-card__period">/year</span>
+                </div>
+                <p class="pricing-tier-card__monthly-note">Just $12.42 / month billed annually</p>
+              </div>
+
+              <ul class="pricing-tier-card__features" aria-label="Premier plan features">
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Up to 6 service calls</strong> included per year</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Free 35-mile towing</strong> per incident</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Flatbed towing guaranteed</strong> for AWD &amp; EVs</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Battery jump, test</strong> &amp; mobile delivery</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Free lockout entry</strong> &amp; key retrieval</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Up to 3 gallons free fuel</strong> delivered</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>Heavy winching &amp; recovery</strong> included</span>
+                </li>
+                <li class="pricing-tier-card__feature">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span><strong>$500 Trip interruption</strong> reimbursement</span>
+                </li>
+              </ul>
+
+              <div class="pricing-tier-card__footer">
+                <a class="button button--secondary" href="contact.html?plan=premier">Choose Premier Plan</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Side-by-Side Detailed Feature Comparison Table -->
+      <section class="section surface" id="comparison-table" aria-labelledby="comparison-table-title">
+        <div class="container">
+          <div class="pricing-heading">
+            <p class="eyebrow">Side-by-Side Breakdown</p>
+            <h2 id="comparison-table-title">Detailed Plan Feature Comparison</h2>
+            <p>Review exact limits, mileage inclusions, and specialized recovery support across all membership options.</p>
+          </div>
+
           <div class="pricing-table-wrap">
             <table class="pricing-table">
               <caption class="visually-hidden">Comparison of illustrative RoadRescue roadside plans</caption>
               <thead>
-                <tr><th scope="col">Plan feature</th><th scope="col">Essential <span class="plan-price">$59<small>/year</small></span></th><th scope="col">Plus <span class="plan-price">$99<small>/year</small></span></th><th scope="col">Premier <span class="plan-price">$149<small>/year</small></span></th></tr>
+                <tr>
+                  <th scope="col" style="width: 34%;">Feature / Service</th>
+                  <th scope="col" style="width: 22%;">Essential <span class="plan-price">$59<small>/yr</small></span></th>
+                  <th scope="col" style="width: 22%;">Plus <span class="plan-price">$99<small>/yr</small></span></th>
+                  <th scope="col" style="width: 22%;">Premier <span class="plan-price">$149<small>/yr</small></span></th>
+                </tr>
               </thead>
               <tbody>
-                <tr><th scope="row">Roadside service requests</th><td>Up to 2 / year</td><td>Up to 4 / year</td><td>Up to 6 / year</td></tr>
-                <tr><th scope="row">Towing allowance</th><td>Local dispatch</td><td>Up to 10 sample miles</td><td>Up to 25 sample miles</td></tr>
-                <tr><th scope="row">Battery and tire support</th><td><i class="bi bi-check-lg" aria-label="Included"></i></td><td><i class="bi bi-check-lg" aria-label="Included"></i></td><td><i class="bi bi-check-lg" aria-label="Included"></i></td></tr>
-                <tr><th scope="row">Lockout and fuel coordination</th><td>Available at added cost</td><td>Included service call</td><td>Included service call</td></tr>
-                <tr><th scope="row">Trip support</th><td>—</td><td>Basic</td><td>Priority contact</td></tr>
-                <tr><th scope="row">Best for</th><td>Local drivers</td><td>Frequent commuters</td><td>Regular travelers</td></tr>
-                <tr><th scope="row">Next step</th><td><a class="button button--secondary" href="contact.html?plan=essential">Ask about Essential</a></td><td><a class="button button--primary" href="contact.html?plan=plus">Ask about Plus</a></td><td><a class="button button--secondary" href="contact.html?plan=premier">Ask about Premier</a></td></tr>
+                <tr>
+                  <th scope="row">Annual Service Calls</th>
+                  <td>2 Calls / year</td>
+                  <td><strong>4 Calls / year</strong></td>
+                  <td><strong>6 Calls / year</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Free Towing Radius</th>
+                  <td>Up to 5 miles</td>
+                  <td><strong>Up to 15 miles</strong></td>
+                  <td><strong>Up to 35 miles</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Flatbed Towing for AWD / EVs</th>
+                  <td>Available ($20 upgrade)</td>
+                  <td>Included upon request</td>
+                  <td><strong>Guaranteed Priority</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Battery Jump-Start &amp; Diagnostic</th>
+                  <td><i class="bi bi-check-lg" aria-label="Included"></i></td>
+                  <td><i class="bi bi-check-lg" aria-label="Included"></i></td>
+                  <td><i class="bi bi-check-lg" aria-label="Included"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row">Flat Tire Spare Mounting</th>
+                  <td><i class="bi bi-check-lg" aria-label="Included"></i></td>
+                  <td><i class="bi bi-check-lg" aria-label="Included"></i></td>
+                  <td><i class="bi bi-check-lg" aria-label="Included"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row">Vehicle Lockout Assistance</th>
+                  <td>$25 service copay</td>
+                  <td><strong>Included ($0 copay)</strong></td>
+                  <td><strong>Included ($0 copay)</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Emergency Fuel Delivery</th>
+                  <td>Delivery fee applies</td>
+                  <td><strong>Free (2 Gallons included)</strong></td>
+                  <td><strong>Free (3 Gallons included)</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Winch-Out &amp; Ditch Recovery</th>
+                  <td>Standard hourly rate</td>
+                  <td>Minor winching (within 30 ft)</td>
+                  <td><strong>Heavy winching included</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Trip Interruption Coverage</th>
+                  <td>—</td>
+                  <td>Basic guidance</td>
+                  <td><strong>Up to $500 lodging &amp; meals</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Family &amp; Vehicle Sharing</th>
+                  <td>1 Registered Vehicle</td>
+                  <td>2 Registered Vehicles</td>
+                  <td><strong>Up to 4 Household Vehicles</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Select Your Plan</th>
+                  <td><a class="button button--secondary" href="contact.html?plan=essential">Choose Essential</a></td>
+                  <td><a class="button button--primary" href="contact.html?plan=plus">Choose Plus</a></td>
+                  <td><a class="button button--secondary" href="contact.html?plan=premier">Choose Premier</a></td>
+                </tr>
               </tbody>
             </table>
           </div>
+
+          <p class="demo-notice">
+            <i class="bi bi-info-circle-fill" aria-hidden="true"></i> <strong>Membership Note:</strong> Annual plan coverage activates 24 hours after enrollment. Excess towing mileage beyond plan limits is charged at a discounted member rate of $3.50/mile.
+          </p>
         </div>
       </section>
-      <section class="section surface">
-        <div class="container grid grid--3">
-          <article class="page-panel"><span class="icon-tile"><i class="bi bi-receipt" aria-hidden="true"></i></span><h3>Know what is included</h3><p>Ask what a membership covers, how mileage is calculated, and whether a service call or parts are charged separately.</p></article>
-          <article class="page-panel"><span class="icon-tile"><i class="bi bi-geo-alt" aria-hidden="true"></i></span><h3>Confirm your location</h3><p>Service availability and travel distances can differ by region, road access, and time of day.</p></article>
-          <article class="page-panel"><span class="icon-tile"><i class="bi bi-chat-square-text" aria-hidden="true"></i></span><h3>Request a clear quote</h3><p>For one-time towing or recovery, share the vehicle, pickup, destination, and access details before approving service.</p></article>
+
+      <!-- Section 3: On-Demand Emergency Rates (Pay As You Go) -->
+      <section class="section" id="on-demand" aria-labelledby="ondemand-title">
+        <div class="container">
+          <div class="pricing-heading">
+            <p class="eyebrow"><i class="bi bi-speedometer2" aria-hidden="true"></i> No Membership Required</p>
+            <h2 id="ondemand-title">On-Demand Emergency Roadside Rates</h2>
+            <p>Need roadside help right now? You don't have to be a member to get fast, dependable service. All one-time emergency requests come with an upfront, binding quote before our truck rolls.</p>
+          </div>
+
+          <div class="ondemand-pricing-grid">
+            
+            <article class="ondemand-card">
+              <div class="ondemand-card__left">
+                <span class="ondemand-card__icon"><i class="bi bi-truck-front-fill" aria-hidden="true"></i></span>
+                <div class="ondemand-card__text">
+                  <h3>Standard Wheel-Lift Towing</h3>
+                  <p>Light passenger cars, compacts, and sedans with clear road access</p>
+                </div>
+              </div>
+              <div class="ondemand-card__rate">
+                <span class="ondemand-card__price">$75 + $4.50</span>
+                <span class="ondemand-card__unit">flat hookup + per loaded mile</span>
+              </div>
+            </article>
+
+            <article class="ondemand-card">
+              <div class="ondemand-card__left">
+                <span class="ondemand-card__icon"><i class="bi bi-truck-flatbed" aria-hidden="true"></i></span>
+                <div class="ondemand-card__text">
+                  <h3>Flatbed Towing (AWD / EV / Luxury)</h3>
+                  <p>Zero wheel-drag transport for all-wheel drive, electric cars &amp; sports models</p>
+                </div>
+              </div>
+              <div class="ondemand-card__rate">
+                <span class="ondemand-card__price">$95 + $5.00</span>
+                <span class="ondemand-card__unit">flat hookup + per loaded mile</span>
+              </div>
+            </article>
+
+            <article class="ondemand-card">
+              <div class="ondemand-card__left">
+                <span class="ondemand-card__icon"><i class="bi bi-battery-charging" aria-hidden="true"></i></span>
+                <div class="ondemand-card__text">
+                  <h3>Battery Jump-Start &amp; Diagnostics</h3>
+                  <p>Heavy-duty commercial booster pack, alternator check &amp; terminal cleaning</p>
+                </div>
+              </div>
+              <div class="ondemand-card__rate">
+                <span class="ondemand-card__price">$65</span>
+                <span class="ondemand-card__unit">flat rate service call</span>
+              </div>
+            </article>
+
+            <article class="ondemand-card">
+              <div class="ondemand-card__left">
+                <span class="ondemand-card__icon"><i class="bi bi-life-preserver" aria-hidden="true"></i></span>
+                <div class="ondemand-card__text">
+                  <h3>Flat Tire Assistance</h3>
+                  <p>Mounting your usable spare tire, lug nut torque inspection &amp; air pressure check</p>
+                </div>
+              </div>
+              <div class="ondemand-card__rate">
+                <span class="ondemand-card__price">$60</span>
+                <span class="ondemand-card__unit">flat rate service call</span>
+              </div>
+            </article>
+
+            <article class="ondemand-card">
+              <div class="ondemand-card__left">
+                <span class="ondemand-card__icon"><i class="bi bi-key-fill" aria-hidden="true"></i></span>
+                <div class="ondemand-card__text">
+                  <h3>Car Lockout &amp; Key Retrieval</h3>
+                  <p>Gentle, non-destructive vehicle entry using professional air wedges and tools</p>
+                </div>
+              </div>
+              <div class="ondemand-card__rate">
+                <span class="ondemand-card__price">$70</span>
+                <span class="ondemand-card__unit">flat rate service call</span>
+              </div>
+            </article>
+
+            <article class="ondemand-card">
+              <div class="ondemand-card__left">
+                <span class="ondemand-card__icon"><i class="bi bi-fuel-pump-fill" aria-hidden="true"></i></span>
+                <div class="ondemand-card__text">
+                  <h3>Emergency Fuel Delivery</h3>
+                  <p>Prompt delivery of up to 2 gallons of unleaded gasoline or clean diesel</p>
+                </div>
+              </div>
+              <div class="ondemand-card__rate">
+                <span class="ondemand-card__price">$55</span>
+                <span class="ondemand-card__unit">flat rate (fuel included)</span>
+              </div>
+            </article>
+
+            <article class="ondemand-card">
+              <div class="ondemand-card__left">
+                <span class="ondemand-card__icon"><i class="bi bi-slash-circle-fill" aria-hidden="true"></i></span>
+                <div class="ondemand-card__text">
+                  <h3>Winch-Out &amp; Ditch Recovery</h3>
+                  <p>Extrication from snowbanks, mud, sand, or roadside ditches (within 50 feet)</p>
+                </div>
+              </div>
+              <div class="ondemand-card__rate">
+                <span class="ondemand-card__price">$95</span>
+                <span class="ondemand-card__unit">per hour (30 min minimum)</span>
+              </div>
+            </article>
+
+            <article class="ondemand-card">
+              <div class="ondemand-card__left">
+                <span class="ondemand-card__icon"><i class="bi bi-shield-shaded" aria-hidden="true"></i></span>
+                <div class="ondemand-card__text">
+                  <h3>Motorcycle &amp; Specialty Transport</h3>
+                  <p>Soft-strap wheel chocks, customized trailers, and low-angle loading ramps</p>
+                </div>
+              </div>
+              <div class="ondemand-card__rate">
+                <span class="ondemand-card__price">$90 + $5.50</span>
+                <span class="ondemand-card__unit">flat hookup + per loaded mile</span>
+              </div>
+            </article>
+
+          </div>
+
+          <div style="text-align: center; margin-block-start: 1.5rem;">
+            <a class="button button--primary" href="request-assistance.html">Request Emergency Service Now <i class="bi bi-arrow-up-right icon-directional" aria-hidden="true"></i></a>
+          </div>
         </div>
       </section>
-      <section class="section">
+
+      <!-- Section 4: Fleet & Commercial Accounts -->
+      <section class="section" id="fleet" aria-labelledby="fleet-title">
+        <div class="container">
+          <div class="fleet-pricing-box">
+            <div>
+              <p class="eyebrow" style="color: #fdba74;"><i class="bi bi-building-check" aria-hidden="true"></i> Commercial Solutions</p>
+              <h2 id="fleet-title">Fleet &amp; Business Vehicle Accounts</h2>
+              <p>Keep your commercial delivery vans, service trucks, and company cars on schedule with dedicated roadside support. We offer consolidated monthly invoicing, priority dispatch routing, and customized Service Level Agreements (SLAs).</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                <a class="button button--primary" href="contact.html?subject=fleet">Inquire About Fleet Pricing</a>
+                <a class="button button--secondary" href="tel:+18005550199" style="border-color: rgba(255,255,255,0.4); color: #fff;">Call Fleet Sales: (800) 555-0199</a>
+              </div>
+            </div>
+
+            <div class="fleet-tiers" aria-label="Commercial fleet discount tiers">
+              <div class="fleet-tier">
+                <div>
+                  <strong>Small Business Fleet</strong>
+                  <div style="font-size: 0.8rem; color: #94a3b8;">3 to 10 Vehicles</div>
+                </div>
+                <span>15% Discount</span>
+              </div>
+
+              <div class="fleet-tier">
+                <div>
+                  <strong>Mid-Size Commercial Fleet</strong>
+                  <div style="font-size: 0.8rem; color: #94a3b8;">11 to 25 Vehicles</div>
+                </div>
+                <span>25% Discount + Account Mgr</span>
+              </div>
+
+              <div class="fleet-tier">
+                <div>
+                  <strong>Enterprise Fleet Solutions</strong>
+                  <div style="font-size: 0.8rem; color: #94a3b8;">26+ Heavy &amp; Mixed Fleets</div>
+                </div>
+                <span>Custom Retainer &amp; Sub-25m SLA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Cost Factors (Educational & Transparent) -->
+      <section class="section surface" id="cost-factors" aria-labelledby="cost-factors-title">
+        <div class="container">
+          <div class="pricing-heading">
+            <p class="eyebrow">Clear &amp; Understandable</p>
+            <h2 id="cost-factors-title">What Determines Your Towing Cost?</h2>
+            <p>We pride ourselves on zero hidden fees. Your exact quote is calculated using four straightforward, transparent criteria:</p>
+          </div>
+
+          <div class="factors-grid">
+            
+            <article class="factor-card">
+              <span class="icon-tile" aria-hidden="true"><i class="bi bi-car-front-fill"></i></span>
+              <h3>1. Vehicle Class &amp; Weight</h3>
+              <p>Standard passenger sedans require wheel-lift rigs, whereas heavy SUVs, full-size pickups, and electric vehicles require hydraulic flatbed transport.</p>
+            </article>
+
+            <article class="factor-card">
+              <span class="icon-tile" aria-hidden="true"><i class="bi bi-signpost-2-fill"></i></span>
+              <h3>2. Loaded Mileage</h3>
+              <p>Mileage is measured strictly from where your car is hooked up to your designated repair shop, dealership, or home address. No deadhead charges.</p>
+            </article>
+
+            <article class="factor-card">
+              <span class="icon-tile" aria-hidden="true"><i class="bi bi-geo-alt-fill"></i></span>
+              <h3>3. Location &amp; Access Difficulty</h3>
+              <p>Vehicles parked on a standard shoulder are straightforward; vehicles trapped inside low-clearance underground garages or down ravines require specialty gear.</p>
+            </article>
+
+            <article class="factor-card">
+              <span class="icon-tile" aria-hidden="true"><i class="bi bi-tools"></i></span>
+              <h3>4. Specialized Equipment Needed</h3>
+              <p>Locked steering wheels, missing keys, sheared ball joints, or missing wheels require specialized auxiliary dollies, skates, or dual-line winches.</p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: No-Surprise Price Guarantees -->
+      <section class="section" aria-labelledby="guarantee-title">
+        <div class="container">
+          <div class="pricing-heading">
+            <p class="eyebrow">The RoadRescue Promise</p>
+            <h2 id="guarantee-title">Our No-Surprise Price Guarantee</h2>
+            <p>You should never have to guess what roadside assistance costs while stranded. Here is our customer commitment on every service call:</p>
+          </div>
+
+          <div class="guarantee-grid">
+            
+            <article class="guarantee-card">
+              <span class="guarantee-card__icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
+              <h3>100% Upfront Binding Quotes</h3>
+              <p>We review your vehicle and destination, confirm your price, and get your approval before dispatching our tow operator. What we quote is what you pay.</p>
+            </article>
+
+            <article class="guarantee-card">
+              <span class="guarantee-card__icon"><i class="bi bi-receipt-cutoff" aria-hidden="true"></i></span>
+              <h3>Itemized Invoices for Insurance</h3>
+              <p>Receive an itemized digital receipt detailing date, breakdown cause, loaded mileage, and service breakdown for effortless insurance reimbursement.</p>
+            </article>
+
+            <article class="guarantee-card">
+              <span class="guarantee-card__icon"><i class="bi bi-credit-card-2-front" aria-hidden="true"></i></span>
+              <h3>All Major Payment Types Accepted</h3>
+              <p>Pay conveniently roadside via Visa, MasterCard, American Express, Discover, Apple Pay, Google Pay, or cash directly with our certified operator.</p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Pricing Frequently Asked Questions -->
+      <section class="section surface" id="faqs" aria-labelledby="faqs-title">
+        <div class="container">
+          <div class="pricing-heading">
+            <p class="eyebrow">Frequently Asked Questions</p>
+            <h2 id="faqs-title">Common Questions About Pricing &amp; Plans</h2>
+            <p>Everything you need to know about roadside payment methods, insurance claims, and membership terms.</p>
+          </div>
+
+          <div class="pricing-faq-grid">
+            
+            <article class="faq-card">
+              <h3><i class="bi bi-question-circle-fill" aria-hidden="true"></i> Will my auto insurance or credit card reimburse roadside fees?</h3>
+              <p>Yes, most comprehensive auto insurance policies and premium credit cards include roadside assistance coverage. We supply full, itemized digital receipts with dispatch timestamps, service breakdowns, and loaded mileage so you can submit for fast, hassle-free reimbursement.</p>
+            </article>
+
+            <article class="faq-card">
+              <h3><i class="bi bi-question-circle-fill" aria-hidden="true"></i> How is towing mileage calculated?</h3>
+              <p>Towing mileage is calculated exclusively by "loaded miles" — the exact distance between your pickup breakdown location and your drop-off destination. We do not bill you for the miles our truck drives to reach you ("deadhead mileage").</p>
+            </article>
+
+            <article class="faq-card">
+              <h3><i class="bi bi-question-circle-fill" aria-hidden="true"></i> Are there extra fees for night, weekend, or holiday service?</h3>
+              <p>For annual plan members, service calls are covered 24/7/365 with zero after-hours surcharges. For one-time on-demand service, our dispatchers provide an all-inclusive binding quote upfront before you confirm, so you are never surprised by after-hours rates.</p>
+            </article>
+
+            <article class="faq-card">
+              <h3><i class="bi bi-question-circle-fill" aria-hidden="true"></i> Can I buy an annual plan while my car is currently stranded?</h3>
+              <p>Annual plans have a standard 24-hour waiting period to prevent immediate plan exploitation. However, we can dispatch help right now at our transparent on-demand rates and apply a $20 promotional discount toward an annual membership when you sign up.</p>
+            </article>
+
+            <article class="faq-card">
+              <h3><i class="bi bi-question-circle-fill" aria-hidden="true"></i> What if my tow distance exceeds my membership allowance?</h3>
+              <p>If your tow exceeds the free mileage allowance in your plan (e.g. 15 miles on Plus), you simply pay our heavily discounted member overage rate of $3.50 per additional mile, compared to the standard $4.50 – $5.00 non-member rate.</p>
+            </article>
+
+            <article class="faq-card">
+              <h3><i class="bi bi-question-circle-fill" aria-hidden="true"></i> What happens if my car starts before the tow truck arrives?</h3>
+              <p>If you notify us within 10 minutes of dispatch, cancellation is completely free of charge. If the operator arrives on scene before cancellation, a minor dispatch arrival fee ($35) applies to compensate the driver's fuel and time.</p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Final Call to Action Banner -->
+      <section class="section" aria-labelledby="cta-banner-title">
         <div class="container contact-banner">
-          <div><p class="eyebrow">Questions about a plan?</p><h2>Let’s compare your options</h2><p>Our team can explain plan details and discuss business support requirements.</p></div>
-          <div class="contact-banner__actions"><a class="button button--primary" href="contact.html">Contact us</a><a class="button button--secondary" href="tel:+18005550199">Call (800) 555-0199</a></div>
+          <div>
+            <p class="eyebrow"><i class="bi bi-telephone-fill" aria-hidden="true"></i> 24/7 Roadside Assistance</p>
+            <h2 id="cta-banner-title">Need Immediate Help or Have Plan Questions?</h2>
+            <p>Our certified dispatch operators are standing by 24 hours a day, 7 days a week, 365 days a year to keep you safe and moving.</p>
+          </div>
+          <div class="contact-banner__actions">
+            <a class="button button--primary" href="request-assistance.html">Request Help Online <i class="bi bi-arrow-up-right icon-directional" aria-hidden="true"></i></a>
+            <a class="button button--secondary" href="tel:+18005550199">Call (800) 555-0199</a>
+          </div>
         </div>
       </section>
+
     </main>
     <site-footer></site-footer>
   </body>
