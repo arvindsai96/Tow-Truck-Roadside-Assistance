@@ -292,7 +292,56 @@
         { question: "Does my insurance cover accident recovery towing?", answer: "In most cases, yes. Collision, comprehensive, or roadside insurance policies typically cover the cost of scene recovery, cleanup, and towing. We provide full itemized receipts, scene photographs, and digital documentation compatible with all major insurance carriers." }
       ]
     },
-    { id: "long-distance-transport", title: "Vehicle transport", category: "Towing", icon: "bi-arrow-left-right", image: "assets/images/blog/vehicle-maintenance.jpg", summary: "Planned vehicle transport for longer trips, relocations, or shop transfers.", details: "Scheduled transport is arranged around vehicle condition, pickup and delivery access, timing, and distance. Confirm the vehicle's operability and any special handling needs when requesting a quote.", included: ["Pickup and delivery locations recorded", "Vehicle condition and handling requirements noted", "Timing and quote confirmed before booking"], when: "A vehicle needs to be moved between locations without being driven.", faqs: [{ question: "What details should I provide when booking vehicle transport?", answer: "Share the pickup and delivery addresses, vehicle make and model, whether it runs, its approximate size, and any access restrictions. Provide your preferred dates and mention modifications or low ground clearance that may affect loading." }, { question: "Can a non-running vehicle be transported?", answer: "Often, but the provider needs to know whether it can roll, steer, and brake. Non-running vehicles may require special loading equipment or incur additional charges, so describe the condition before booking." }, { question: "How should I prepare the vehicle for pickup?", answer: "Follow the provider's instructions. Typically, remove personal belongings and loose accessories, leave only the agreed fuel level, and make sure the vehicle is accessible. Ask whether keys must be provided and document the vehicle's condition at handoff." }, { question: "Can I choose the pickup and delivery dates?", answer: "You can request preferred dates, but availability and timing depend on the route, schedule, and transport method. Confirm the pickup window, estimated delivery date, and how you will receive updates." }, { question: "Will the vehicle be driven during transport?", answer: "Transport methods vary. Confirm whether your vehicle will be loaded onto a carrier or moved another way, and ask how it will be secured and whether additional mileage or handling is expected." }, { question: "What should I confirm in the transport quote?", answer: "Ask whether the quote includes pickup, delivery, distance, loading, fuel or toll charges, insurance or coverage terms, and any access or waiting fees. Confirm cancellation terms and the process for noting existing damage before you book." }] },
+    {
+      id: "long-distance-transport",
+      title: "Vehicle transport",
+      category: "Transport",
+      icon: "bi-truck",
+      image: "assets/images/services/vehicle-transport-service.jpg",
+      imageAlt: "Heavy-duty commercial auto transport carrier hauling multi-vehicle shipment for relocations and long-distance transport",
+      imageCaption: "Multi-vehicle commercial carrier equipped for inter-city relocations, dealership transfers, and long-distance transport",
+      imageWidth: 1376,
+      imageHeight: 768,
+      summary: "Planned vehicle transport for interstate trips, relocations, seasonal snowbirds, and shop transfers.",
+      details: "Whether moving cross-country, purchasing a vehicle from an out-of-state dealership, or transferring project vehicles between specialty workshops, RoadRescue provides fully insured and scheduled vehicle transport. We accommodate running and inoperable cars, exotic sports cars, classic restorations, and family SUVs via modern multi-car haulers and dedicated single-vehicle flatbed carriers with door-to-door tracking.",
+      included: [
+        "Door-to-door or terminal-to-terminal transport scheduling across regional & interstate routes",
+        "Options for multi-vehicle open carriers or dedicated single-car hydraulic flatbeds",
+        "Accommodations for non-running, low-clearance, modified, or classic vehicles",
+        "Comprehensive pre-trip multi-point photographic inspection and bill of lading (BOL)",
+        "Zero-contact soft-tie over-the-wheel harness straps eliminating chassis and paint stress",
+        "Full cargo insurance coverage with transparent, upfront door-to-door rate quotes",
+        "Real-time GPS milestone tracking and advance delivery arrival notification"
+      ],
+      when: "You are relocating, purchasing a car from another state, transporting a vintage/exotic vehicle, or transferring an inoperable vehicle to a specialist repair facility.",
+      extraVisualSection: `
+        <div class="detail-feature-card page-panel">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <img class="detail-feature-image" src="assets/images/services/vehicle-transport-flatbed.jpg" alt="Single-vehicle flatbed carrier with Audi SUV secured using 4-point over-the-wheel straps" width="1376" height="768" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <span class="category-pill mb-2"><i class="bi bi-shield-check me-1" aria-hidden="true"></i> Damage-Free Protocol</span>
+              <h3 class="h4">Dedicated Flatbeds &amp; Soft-Tie Securement</h3>
+              <p>For high-value, luxury, low-clearance sports cars, and inoperable vehicles, our dedicated flatbed carriers offer total peace of mind. We utilize 4-point nylon over-the-wheel harness straps that secure tires directly to the deck tracks without metal hooks ever touching rims, suspension arms, or painted body panels.</p>
+              <ul class="check-list mt-2">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Zero-contact over-the-tire soft harness straps protect rims and alignment</span></li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Gentle-angle hydraulic rollback beds protect low-clearance front splitters</span></li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Digital photographic inspection report signed at origin and destination</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      `,
+      faqs: [
+        { question: "What details should I provide when booking vehicle transport?", answer: "Share the pickup and delivery addresses, vehicle make, model, year, whether it runs and rolls, and approximate delivery timeframe. Mention any aftermarket modifications, lift kits, oversized tires, or low ground clearance that may require specialized ramps or carrier equipment." },
+        { question: "Can a non-running or damaged vehicle be transported?", answer: "Yes. Non-running vehicles are loaded using specialized onboard electric winches, wheel skates, and auxiliary ramps. Simply notify dispatch in advance so we assign a carrier equipped with winching capabilities." },
+        { question: "How should I prepare my vehicle for scheduled transport?", answer: "Wash the vehicle to make pre-inspection easy, remove personal valuables and toll transponders, ensure fluid levels are topped up with no active leaks, and keep the gas tank at roughly 1/4 full. Document existing scratches or dings with our transport specialist on the inspection sheet before release." },
+        { question: "Can I choose specific pickup and delivery dates?", answer: "Yes. We offer flexible scheduling with guaranteed pickup windows and expedited direct-transport options for time-sensitive relocations. Dispatch will provide scheduled date ranges and maintain direct driver communication as transit milestones are reached." },
+        { question: "Is my vehicle insured during transit?", answer: "Yes, every vehicle in our care is covered by comprehensive commercial carrier cargo insurance from the moment of pre-trip inspection handoff until final delivery signature." },
+        { question: "What is included in the transport pricing quote?", answer: "Our quotes are 100% transparent and inclusive of door-to-door transit, mileage, fuel surcharges, highway tolls, loading/unloading, and full cargo insurance with zero surprise fees." }
+      ]
+    },
     {
       id: "fleet-assistance",
       title: "Fleet roadside assistance",
