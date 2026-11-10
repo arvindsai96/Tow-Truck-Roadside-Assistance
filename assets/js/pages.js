@@ -514,12 +514,12 @@
             <h2>Related services</h2>
             <div class="grid grid--2">${services.filter((item) => item.id !== service.id).slice(0, 2).map((item) => `<a class="page-panel" href="service-details.html?service=${item.id}"><strong>${item.title}</strong><p>${item.summary}</p></a>`).join("")}</div>
           </article>
-          <aside class="page-panel sticky-card roadside-cta" aria-label="Request roadside assistance">
-            <p class="eyebrow">Roadside support</p>
-            <h2>Need help with your vehicle?</h2>
-            <p>Explore assistance options or contact the team to discuss your situation.</p>
-            <a class="button button--primary" href="services.html">Explore services</a>
-            <a class="button button--secondary" href="tel:+18005550199">Call (800) 555-0199</a>
+          <aside class="page-panel sticky-card" aria-label="Request roadside assistance">
+            <p class="eyebrow">Need help now?</p>
+            <h2>Talk through your situation</h2>
+            <p>Share your location and vehicle details so the next step can be assessed.</p>
+            <a class="button button--primary" href="tel:+18005550199"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call (800) 555-0199</a>
+            <a class="button button--secondary mt-2" href="contact.html">Send a message</a>
           </aside>
         </div>
       `;
