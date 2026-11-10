@@ -27,8 +27,8 @@ class SiteHeader extends HTMLElement {
                     <i class="bi bi-chevron-down" aria-hidden="true"></i>
                   </button>
                   <ul class="site-nav__dropdown" id="home-menu">
-                    <li><a class="site-nav__link" href="index.html">Home 1</a></li>
-                    <li><a class="site-nav__link" href="home-2.html">Home 2</a></li>
+                    <li><a class="site-nav__link" href="index.html">Emergency Roadside Support</a></li>
+                    <li><a class="site-nav__link" href="home-2.html">Professional Towing Services</a></li>
                   </ul>
                 </li>
                 <li><a class="site-nav__link" href="about.html">About Us</a></li>
