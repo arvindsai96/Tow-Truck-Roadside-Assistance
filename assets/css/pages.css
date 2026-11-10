@@ -3455,3 +3455,17 @@
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-xs);
 }
+
+
+/* Blog Article Centered & Balanced Layout */
+.article-detail-layout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.article-detail-layout .article-body {
+  width: 100%;
+  max-width: 52rem;
+  margin-inline: auto;
+}
