@@ -635,7 +635,7 @@
           <article class="article-body">
             <ul class="breadcrumb" aria-label="Breadcrumb"><li><a href="index.html">Home</a></li><li><a href="blog.html">Roadside guide</a></li><li aria-current="page">${post.title}</li></ul>
             <span class="category-pill">${post.category}</span>
-            <h1>${post.title}</h1>
+            <h1 class="article-title article-title--${post.id}">${post.title}</h1>
             <div class="article-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i>${post.date}</span><span>${post.read}</span><span>RoadRescue Team</span></div>
             <figure class="article-detail-figure">
               <img class="detail-image article-detail-image" src="${post.detailImage || post.image}" alt="${post.detailAlt || post.alt}" fetchpriority="high" width="1280" height="720"${post.id === "choosing-tow-service" ? ' style="object-position: center 52%;"' : ""}>

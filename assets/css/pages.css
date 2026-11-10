@@ -3472,13 +3472,10 @@
 }
 
 .article-detail-layout .article-body h1 {
-  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
-  line-height: 1.15;
-  white-space: normal;
-  text-wrap: balance;
-  margin-block: 0.75rem 1rem;
+  font-size: clamp(1.35rem, 4.5vw, 3.6rem);  line-height: 1.15;
+  white-space: nowrap;  text-wrap: nowrap;  letter-spacing: -0.025em;  margin-block: 0.75rem 1rem;
 }
-
+.article-detail-layout .article-title--winter-roadside-kit {  font-size: clamp(1.15rem, 3.2vw, 2.25rem);}@media (max-width: 700px) {  .article-detail-layout .article-body h1 {    font-size: clamp(0.95rem, 5.8vw, 1.35rem);  }}
 .article-detail-layout .article-detail-figure {
   width: 100%;
   max-width: 56rem;
