@@ -90,7 +90,7 @@
   }
 
   .site-nav__item--dropdown:hover .site-nav__dropdown {
-    display: none;
+    display: flex;
   }
 
   .site-nav__item--dropdown.is-open .site-nav__dropdown,
