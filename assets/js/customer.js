@@ -374,8 +374,8 @@
   function setupProfileForm() {
     const form = shell.querySelector("[data-profile-form]");
     const status = shell.querySelector("[data-profile-status]");
-    form.elements.name.value = profile.name;
-    form.elements.email.value = profile.email;
+    form.elements.name.value = "";
+    form.elements.email.value = "";
     form.elements.phone.value = profile.phone || "";
     form.elements.preferredContact.value = profile.preferredContact || "email";
     form.addEventListener("submit", (event) => {
@@ -385,17 +385,24 @@
       if (!form.reportValidity()) return;
       try {
         const profiles = readProfiles();
-        const index = profiles.findIndex((item) => item.email === session.email);
+        const previousEmail = session.email;
+        const nextEmail = form.elements.email.value.trim().toLowerCase();
+        const index = profiles.findIndex((item) => item.email === previousEmail);
         if (index < 0) throw new Error("The local demo profile is no longer available.");
         profile = {
           ...profiles[index],
+          email: nextEmail,
           name: form.elements.name.value.trim(),
           phone: form.elements.phone.value.trim(),
           preferredContact: form.elements.preferredContact.value
         };
         profiles[index] = profile;
         localStorage.setItem(profileKey, JSON.stringify(profiles));
-        session = { ...session, name: profile.name };
+        requests = requests.map((item) => item.ownerEmail.toLowerCase() === previousEmail
+          ? { ...item, ownerEmail: nextEmail }
+          : item);
+        localStorage.setItem(requestKey, JSON.stringify(requests));
+        session = { ...session, email: nextEmail, name: profile.name };
         writeSession(session);
         document.querySelectorAll("[data-customer-name]").forEach((element) => {
           element.textContent = profile.name;
