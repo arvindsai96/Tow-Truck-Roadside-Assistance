@@ -269,9 +269,9 @@
   inset-inline-end: 1rem;
   inset-block-end: 0.78rem;
   color: var(--color-text-muted);
-  content: "\\f282";
-  font-family: "bootstrap-icons";
-  font-size: 1rem;
+  content: "▾";
+  font-family: inherit;
+  font-size: 1.1rem;
   pointer-events: none;
 }
 
