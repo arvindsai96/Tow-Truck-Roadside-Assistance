@@ -3457,15 +3457,30 @@
 }
 
 
-/* Blog Article Centered & Balanced Layout */
+/* Blog Article Left-Aligned Layout */
 .article-detail-layout {
-  display: flex;
-  justify-content: center;
+  display: block;
   width: 100%;
 }
 
 .article-detail-layout .article-body {
   width: 100%;
-  max-width: 52rem;
-  margin-inline: auto;
+  max-width: 56rem;
+  margin-inline-start: 0;
+  margin-inline-end: auto;
+  text-align: start;
+}
+
+.article-detail-layout .article-body h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  line-height: 1.15;
+  white-space: normal;
+  text-wrap: balance;
+  margin-block: 0.75rem 1rem;
+}
+
+.article-detail-layout .article-detail-figure {
+  width: 100%;
+  max-width: 56rem;
+  margin: 2rem 0 2rem 0;
 }
