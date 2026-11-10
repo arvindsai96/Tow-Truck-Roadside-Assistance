@@ -1276,11 +1276,21 @@
 .article-body {
   max-width: 48rem;
 }
-
-.article-body p {
-  color: var(--color-text);
-  font-size: 1.05rem;
-}
+
+.article-body h1 {
+  white-space: nowrap;
+}
+
+.article-body p {
+  color: var(--color-text);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 700px) {
+  .article-body h1 {
+    white-space: normal;
+  }
+}
 
 .article-callout {
   margin-block: 2rem;
