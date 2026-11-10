@@ -15,9 +15,8 @@ document.addEventListener("click", (event) => {
   const dropdownToggle = target.closest("[data-dropdown-toggle]");
   if (dropdownToggle) {
     const dropdown = dropdownToggle.closest("[data-nav-dropdown]");
-    const isExpanded = dropdownToggle.getAttribute("aria-expanded") === "true";
-    dropdownToggle.setAttribute("aria-expanded", String(!isExpanded));
-    dropdown?.classList.toggle("is-open", !isExpanded);
+    dropdownToggle.setAttribute("aria-expanded", "true");
+    dropdown?.classList.add("is-open");
     return;
   }
 
@@ -27,6 +26,18 @@ document.addEventListener("click", (event) => {
   }
 
   if (!target.closest(".site-nav")) closeNavigation();
+});
+
+document.addEventListener("mouseover", (event) => {
+  const target = event.target;
+  if (!(target instanceof Element)) return;
+
+  const dropdown = target.closest("[data-nav-dropdown]");
+  if (!dropdown || dropdown.contains(event.relatedTarget)) return;
+
+  const dropdownToggle = dropdown.querySelector("[data-dropdown-toggle]");
+  dropdownToggle?.setAttribute("aria-expanded", "true");
+  dropdown.classList.add("is-open");
 });
 
 document.addEventListener("keydown", (event) => {

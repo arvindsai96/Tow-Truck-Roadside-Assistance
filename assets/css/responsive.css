@@ -60,21 +60,7 @@
   }
 
   .site-nav__item--dropdown {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-  }
-
-  .site-nav__item--dropdown > .site-nav__link {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .site-nav__item--dropdown > .site-nav__dropdown-toggle {
-    width: 2.75rem;
-    grid-column: 2;
-    grid-row: 1;
-    justify-content: center;
+    display: block;
   }
 
   .site-nav__dropdown {

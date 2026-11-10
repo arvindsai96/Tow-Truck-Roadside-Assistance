@@ -22,8 +22,8 @@ class SiteHeader extends HTMLElement {
             <div class="site-nav__content" id="primary-navigation">
               <ul class="site-nav__list">
                 <li class="site-nav__item--dropdown" data-nav-dropdown>
-                  <a class="site-nav__link" href="index.html">Home</a>
-                  <button class="site-nav__dropdown-toggle" type="button" aria-label="Open Home pages menu" aria-controls="home-menu" aria-expanded="false" data-dropdown-toggle>
+                  <button class="site-nav__home-trigger site-nav__link" type="button" aria-haspopup="true" aria-label="Open Home pages menu" aria-controls="home-menu" aria-expanded="false" data-dropdown-toggle>
+                    Home
                     <i class="bi bi-chevron-down" aria-hidden="true"></i>
                   </button>
                   <ul class="site-nav__dropdown" id="home-menu">
