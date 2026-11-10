@@ -60,8 +60,8 @@
                 <h2 id="profile-title">Contact preferences</h2>
                 <form class="customer-form" data-profile-form>
                   <div class="customer-form-grid">
-                    <div class="form-field"><label for="profile-name">Full name</label><input class="form-control" id="profile-name" name="name" required minlength="2" maxlength="80" autocomplete="name"></div>
-                    <div class="form-field"><label for="profile-email">Email address</label><input class="form-control" id="profile-email" name="email" type="email" readonly aria-describedby="profile-email-help"><small class="form-help" id="profile-email-help">Email is fixed to the local demo profile.</small></div>
+                    <div class="form-field"><label class="visually-hidden" for="profile-name">Full name</label><input class="form-control" id="profile-name" name="name" placeholder="Example: Sai Arvind" aria-label="Full name" required minlength="2" maxlength="80" autocomplete="name"></div>
+                    <div class="form-field"><label class="visually-hidden" for="profile-email">Email address</label><input class="form-control" id="profile-email" name="email" type="email" placeholder="Example: sai@example.com" readonly aria-label="Email address" aria-describedby="profile-email-help"><small class="form-help" id="profile-email-help">Email is fixed to the local demo profile.</small></div>
                     <div class="form-field"><label for="profile-phone">Phone number</label><input class="form-control" id="profile-phone" name="phone" type="tel" maxlength="40" autocomplete="tel"></div>
                     <div class="form-field"><label for="profile-preferred-contact">Preferred contact</label><select class="form-select" id="profile-preferred-contact" name="preferredContact" required><option value="email">Email</option><option value="phone">Phone</option></select></div>
                   </div>

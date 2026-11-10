@@ -39,7 +39,7 @@ class SiteHeader extends HTMLElement {
                 <li><a class="site-nav__link" href="contact.html">Contact</a></li>
               </ul>
               <div class="site-nav__actions">
-                <a class="button button--primary" href="dashboard.html">Request Help <i class="bi bi-arrow-up-right icon-directional" aria-hidden="true"></i></a>
+                <a class="button button--primary" href="dashboard.html">Dashboard <i class="bi bi-arrow-up-right icon-directional" aria-hidden="true"></i></a>
                 <div class="site-nav__tools" aria-label="Display options">
                   <button class="icon-button site-nav__tool" type="button" aria-label="Switch to dark theme" aria-pressed="false" data-theme-toggle>
                     <i class="bi bi-moon-stars" aria-hidden="true"></i>
