@@ -306,6 +306,26 @@ p {
   opacity: 0.8;
 }
 
+.coverage-select-field {
+  position: relative;
+}
+
+.coverage-select-field::after {
+  position: absolute;
+  inset-inline-end: 1rem;
+  inset-block-end: 0.78rem;
+  color: var(--color-text-muted);
+  content: "▾";
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.coverage-select-field .form-select {
+  appearance: none;
+  padding-inline-end: 2.75rem;
+  cursor: pointer;
+}
+
 .form-help,
 .form-error {
   margin: 0;
