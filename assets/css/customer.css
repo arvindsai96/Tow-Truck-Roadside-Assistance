@@ -260,6 +260,27 @@
   filter: blur(0.35px);
 }
 
+.customer-contact-field {
+  position: relative;
+}
+
+.customer-contact-field::after {
+  position: absolute;
+  inset-inline-end: 1rem;
+  inset-block-end: 0.78rem;
+  color: var(--color-text-muted);
+  content: "\\f282";
+  font-family: "bootstrap-icons";
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.customer-contact-field .form-select {
+  appearance: none;
+  padding-inline-end: 2.75rem;
+  cursor: pointer;
+}
+
 .customer-status {
   min-height: 1.5rem;
   margin: 0;
