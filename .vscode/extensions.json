@@ -2,6 +2,7 @@
   "recommendations": [
     "ms-vscode.live-server",
     "ritwickdey.liveserver",
-    "ms-edgedevtools.vscode-edge-devtools"
+    "ms-edgedevtools.vscode-edge-devtools",
+    "google.geminicodeassist"
   ]
 }
