@@ -239,26 +239,7 @@
   font-size: 0.9rem;
 }
 
-.profile-example-field {
-  transition: color 160ms ease, opacity 160ms ease, text-shadow 160ms ease;
-}
-
-.profile-example-field:not(:focus) {
-  color: color-mix(in srgb, var(--color-text) 62%, transparent);
-  opacity: 0.82;
-  text-shadow: 0 0 0.32rem color-mix(in srgb, var(--color-text) 72%, transparent);
-}
-
-.profile-example-field:focus {
-  color: var(--color-text);
-  opacity: 1;
-  text-shadow: none;
-}
-
-.profile-example-field::placeholder {
-  opacity: 0.58;
-  filter: blur(0.35px);
-}
+/* Normal clean text inputs */
 
 .customer-contact-field {
   position: relative;
