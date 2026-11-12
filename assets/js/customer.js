@@ -374,6 +374,75 @@
   function setupProfileForm() {
     const form = shell.querySelector("[data-profile-form]");
     const status = shell.querySelector("[data-profile-status]");
+    const phoneInput = form.querySelector("#profile-phone");
+    const phoneError = form.querySelector("#profile-phone-error");
+
+    if (phoneInput) {
+      let errorTimeout = null;
+      const showPhoneError = (message) => {
+        if (!phoneError) return;
+        phoneError.innerHTML = `<i class="bi bi-exclamation-circle-fill me-1" aria-hidden="true"></i>${message || "Numbers only are allowed in this field."}`;
+        phoneError.classList.remove("d-none");
+        phoneInput.classList.add("is-invalid");
+        if (errorTimeout) clearTimeout(errorTimeout);
+        errorTimeout = setTimeout(() => {
+          phoneError.classList.add("d-none");
+          phoneInput.classList.remove("is-invalid");
+        }, 3500);
+      };
+
+      const hidePhoneError = () => {
+        if (!phoneError) return;
+        if (errorTimeout) clearTimeout(errorTimeout);
+        phoneError.classList.add("d-none");
+        phoneInput.classList.remove("is-invalid");
+      };
+
+      // Block non-digit keys on keydown
+      phoneInput.addEventListener("keydown", (e) => {
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        const allowedKeys = [
+          "Backspace", "Delete", "Tab", "Escape", "Enter",
+          "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown",
+          "Home", "End"
+        ];
+        if (allowedKeys.includes(e.key)) return;
+
+        if (!/^[0-9]$/.test(e.key)) {
+          e.preventDefault();
+          showPhoneError("Numbers only are allowed in this field.");
+        } else {
+          hidePhoneError();
+        }
+      });
+
+      // Filter pasted text: remove non-digits
+      phoneInput.addEventListener("paste", (e) => {
+        const pasteData = (e.clipboardData || window.clipboardData).getData("text");
+        if (/[^0-9]/.test(pasteData)) {
+          e.preventDefault();
+          const digitsOnly = pasteData.replace(/\D/g, "");
+          const currentVal = phoneInput.value;
+          const start = phoneInput.selectionStart;
+          const end = phoneInput.selectionEnd;
+          const nextVal = (currentVal.slice(0, start) + digitsOnly + currentVal.slice(end)).slice(0, 15);
+          phoneInput.value = nextVal;
+          phoneInput.setSelectionRange(start + digitsOnly.length, start + digitsOnly.length);
+          showPhoneError("Non-numeric characters were removed. Numbers only are allowed.");
+        }
+      });
+
+      // Virtual keyboards and autofill input sanitization
+      phoneInput.addEventListener("input", () => {
+        if (/[^0-9]/.test(phoneInput.value)) {
+          phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 15);
+          showPhoneError("Numbers only are allowed in this field.");
+        } else {
+          hidePhoneError();
+        }
+      });
+    }
+
     form.elements.name.value = "";
     form.elements.email.value = "";
     form.elements.phone.value = profile.phone || "";
