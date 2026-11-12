@@ -3594,10 +3594,10 @@
   margin-block-end: 1rem;
   margin-inline: 0;
   text-align: start;
-  font-size: clamp(1.75rem, 2.7vw, 2.6rem);
-  line-height: 1.2;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  line-height: 1.15;
   letter-spacing: -0.025em;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .pricing-hero__copy .page-hero__lead {
