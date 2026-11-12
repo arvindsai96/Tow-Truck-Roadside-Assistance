@@ -70,10 +70,10 @@ class SiteFooter extends HTMLElement {
               <p class="site-footer__tagline">Reliable towing and roadside support, available around the clock. Here to help you get moving again.</p>
               <a href="tel:+18005550199"><i class="bi bi-telephone-fill" aria-hidden="true"></i> (800) 555-0199</a>
               <nav class="site-footer__social" aria-label="Social media">
-                <a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-                <a href="https://www.youtube.com/" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
-                <a href="https://x.com/" aria-label="X" title="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X" title="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
               </nav>
             </div>
             <div>
