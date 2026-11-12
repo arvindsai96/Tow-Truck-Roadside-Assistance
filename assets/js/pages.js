@@ -653,6 +653,77 @@
 
   const contactForm = document.querySelector("[data-demo-contact-form]");
   if (contactForm) {
+    const phoneInput = contactForm.querySelector("#contact-phone");
+    const phoneError = contactForm.querySelector("#contact-phone-error");
+
+    if (phoneInput) {
+      let errorTimeout = null;
+      const showPhoneError = (message) => {
+        if (!phoneError) return;
+        phoneError.innerHTML = `<i class="bi bi-exclamation-circle-fill me-1" aria-hidden="true"></i>${message || "Numbers only are allowed in this field."}`;
+        phoneError.classList.remove("d-none");
+        phoneInput.classList.add("is-invalid");
+        if (errorTimeout) clearTimeout(errorTimeout);
+        errorTimeout = setTimeout(() => {
+          phoneError.classList.add("d-none");
+          phoneInput.classList.remove("is-invalid");
+        }, 3500);
+      };
+
+      const hidePhoneError = () => {
+        if (!phoneError) return;
+        if (errorTimeout) clearTimeout(errorTimeout);
+        phoneError.classList.add("d-none");
+        phoneInput.classList.remove("is-invalid");
+      };
+
+      // Block non-digit keys on keydown (allowing control keys like Backspace, Delete, Tab, Arrow keys, etc.)
+      phoneInput.addEventListener("keydown", (e) => {
+        // Allow control combinations (Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X, Cmd, etc.)
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        // Allow navigation and editing keys
+        const allowedKeys = [
+          "Backspace", "Delete", "Tab", "Escape", "Enter",
+          "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown",
+          "Home", "End"
+        ];
+        if (allowedKeys.includes(e.key)) return;
+
+        // If not a numeric character 0-9, block and display instant error message
+        if (!/^[0-9]$/.test(e.key)) {
+          e.preventDefault();
+          showPhoneError("Numbers only are allowed in this field.");
+        } else {
+          hidePhoneError();
+        }
+      });
+
+      // Filter pasted text: if non-digits are pasted, reject non-digits and notify user
+      phoneInput.addEventListener("paste", (e) => {
+        const pasteData = (e.clipboardData || window.clipboardData).getData("text");
+        if (/[^0-9]/.test(pasteData)) {
+          e.preventDefault();
+          const digitsOnly = pasteData.replace(/\D/g, "");
+          const currentVal = phoneInput.value;
+          const start = phoneInput.selectionStart;
+          const end = phoneInput.selectionEnd;
+          const nextVal = (currentVal.slice(0, start) + digitsOnly + currentVal.slice(end)).slice(0, 15);
+          phoneInput.value = nextVal;
+          phoneInput.setSelectionRange(start + digitsOnly.length, start + digitsOnly.length);
+          showPhoneError("Non-numeric characters were removed. Numbers only are allowed.");
+        }
+      });
+
+      // Catch-all input event sanitization in case of virtual keyboards or autofill
+      phoneInput.addEventListener("input", () => {
+        if (/[^0-9]/.test(phoneInput.value)) {
+          phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 15);
+          showPhoneError("Numbers only are allowed in this field.");
+        } else {
+          hidePhoneError();
+        }
+      });
+    }
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
       const status = contactForm.querySelector("[data-form-status]");

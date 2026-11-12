@@ -120,7 +120,8 @@
                   </div>
                   <div class="form-field">
                     <label for="contact-phone">Phone Number <span class="text-danger">*</span></label>
-                    <input class="form-control" id="contact-phone" name="phone" type="tel" autocomplete="tel" required maxlength="40" placeholder="e.g. (555) 234-5678">
+                    <input class="form-control" id="contact-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required maxlength="15" placeholder="e.g. 5552345678" pattern="[0-9]{7,15}" title="Please enter numbers only (7 to 15 digits).">
+                    <p class="form-error mt-1 d-none" id="contact-phone-error" role="alert" aria-live="polite"><i class="bi bi-exclamation-circle-fill me-1" aria-hidden="true"></i>Numbers only are allowed in this field.</p>
                   </div>
                   <div class="form-field customer-contact-field">
                     <label for="contact-topic">Topic of Inquiry <span class="text-danger">*</span></label>
